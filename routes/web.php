@@ -24,3 +24,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/snack', 'SnackController@snack')->name('snack');
+
+Route::get('/feed', 'FeedController@feed')->name('feed');
+
