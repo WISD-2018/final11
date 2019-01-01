@@ -80,12 +80,16 @@
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <a href="#"><img class="card-img-top" src="https://image-cdn-flare.qdm.cloud/q61484b9fbe11d/image/cache/data/feed/TOMAPRO/Original/AdultLamb/c4ab99799eeb45feb09af6864385b245-max-440.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Project Two</a>
+                <a href="{{ route('nutritionp2') }}">成犬骨關節強化配方 7kg</a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+              <p class="card-text">
+              <li>潤滑關節維持軟骨組織</li>
+              <li>大顆粒，慢食幫助潔牙</li>
+              <li>整腸助消化 營養好吸收</li>
+              <li>全面升級添加藜麥</li></p>
             </div>
           </div>
         </div>
