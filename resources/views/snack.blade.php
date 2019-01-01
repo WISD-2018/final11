@@ -113,12 +113,15 @@
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <a href="#"><img class="card-img-top" src="https://b.ecimg.tw/items/DEAK00A84176109/000001_1545789296.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Project Four</a>
+                <a href="{{ route('snackp4') }}">多效雙刷頭潔牙骨 家庭號桶裝 1400g</a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+              <p class="card-text">
+                <li>食用級安心配方</li>
+                <li>維持口腔健康環境</li>
+                <li>有效降低口腔異味</li></p>
             </div>
           </div>
         </div>

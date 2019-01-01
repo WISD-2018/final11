@@ -27,6 +27,8 @@ Route::get('/snackp2', 'SnackController@snackp2')->name('snackp2');
 
 Route::get('/snackp3', 'SnackController@snackp3')->name('snackp3');
 
+Route::get('/snackp4', 'SnackController@snackp4')->name('snackp4');
+
 Route::get('/feed', 'FeedController@feed')->name('feed');
 
 Route::get('/nutrition', 'NutritionController@nutrition')->name('nutrition');

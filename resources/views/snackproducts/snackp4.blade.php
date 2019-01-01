@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>狗糧福利社-零食-天然手作零食-雞肉脆片100g(p3)</title>
+    <title>狗糧福利社-零食-多效雙刷頭潔牙骨 家庭號桶裝 1400g(p4)</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -66,16 +66,14 @@
         <div class="col-lg-9">
 
             <div class="card mt-4">
-                <img class="card-img-top img-fluid" src="https://image.suning.cn/uimg/b2c/newcatentries/0070144353-000000000167574468_2.jpg_800w_800h_4e" alt="">
+                <img class="card-img-top img-fluid" src="https://b.ecimg.tw/items/DEAK00A84176109/000001_1545789296.jpg" alt="">
                 <div class="card-body">
-                    <h3 class="card-title">烘培點心 水果夾心餅/迷你潔牙餅/蔬菜起司餅 500g</h3>
-                    <h4>NTD 360</h4>
+                    <h3 class="card-title">多效雙刷頭潔牙骨 家庭號桶裝 1400g</h3>
+                    <h4>NTD 720</h4>
                     <p class="card-text">
-                    <li>添加起司富含豐富鈣質</li>
-                    <li>添加菜籽油補充Omega 3及6脂肪酸</li>
-                    <li>含天然維他命E及大量纖維質</li>
-                    <li>礦物質及天然抗氧化劑</li>
-                    <li>低卡路里輕食無負擔</li>
+                    <li>食用級安心配方</li>
+                    <li>維持口腔健康環境</li>
+                    <li>有效降低口腔異味</li>
                     </p>
                     <p>
                         <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
