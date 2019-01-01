@@ -112,12 +112,15 @@
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <a href="#"><img class="card-img-top" src="https://img4.momoshop.com.tw/goodsimg/0005/231/217/5231217_R.jpg?t=1511347880" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Project Four</a>
+                <a href="{{ route('feedp4') }}">成犬7歲以上活力長壽配方 8kg</a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+              <p class="card-text">
+              <li>恢復年輕活力的營養</li>
+              <li>臨床實證抗氧化配方</li>
+              <li>不含人工色素及香料</li></p>
             </div>
           </div>
         </div>
