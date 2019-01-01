@@ -95,12 +95,19 @@
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <a href="#"><img class="card-img-top" src="https://image.suning.cn/uimg/b2c/newcatentries/0070144353-000000000167574468_2.jpg_800w_800h_4e" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Project Three</a>
+                <a href="{{ route('snackp3') }}">烘培點心 水果夾心餅/迷你潔牙餅/蔬菜起司餅 500G</a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
+              <p class="card-text">
+                <li>富含豐富鈣質</li>
+                <li>補充Omega 3及6脂肪酸</li>
+                <li>天然維他命E及大量纖維質</li>
+                <li>礦物質及天然抗氧化劑</li>
+                <li>低卡路里輕食無負擔</li>
+                </p>
+                </p>
             </div>
           </div>
         </div>
