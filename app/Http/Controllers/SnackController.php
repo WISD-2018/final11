@@ -14,4 +14,8 @@ class SnackController extends Controller
     {
         return view('snackproducts.snackp1');
     }
+    public function snackp2()
+    {
+        return view('snackproducts.snackp2');
+    }
 }

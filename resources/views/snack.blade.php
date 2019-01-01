@@ -78,12 +78,18 @@
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <a href="#"><img class="card-img-top" src="https://img13.360buyimg.com/n1/jfs/t1/973/23/9607/303561/5bac5ccaE6cd60300/6449aca6a0ff95bd.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Project Two</a>
+                <a href="{{ route('snackp2') }}">天然手作零食-雞肉脆片100g</a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+              <p class="card-text">
+                <li>100%純天然肉品單</li>
+                <li>絕不添加任何添加物</li>
+                <li>手工處理食材</li>
+                <li>去除多餘脂肪、碎骨頭</li>
+                <li>低溫烘焙鎖住養分</li>
+                <li>適用於：犬、貓</li></p>
             </div>
           </div>
         </div>
