@@ -43,3 +43,5 @@ Route::get('/feedp4', 'FeedController@feedp4')->name('feedp4');
 
 //營養品路由
 Route::get('/nutrition', 'NutritionController@nutrition')->name('nutrition');
+
+Route::get('/nutritionp1', 'NutritionController@nutritionp1')->name('nutritionp1');

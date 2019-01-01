@@ -10,4 +10,8 @@ class NutritionController extends Controller
     {
         return view('nutrition');
     }
+    public function nutritionp1()
+    {
+        return view('nutritionproducts.nutritionp1');
+    }
 }
