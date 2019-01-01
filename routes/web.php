@@ -49,3 +49,5 @@ Route::get('/nutritionp1', 'NutritionController@nutritionp1')->name('nutritionp1
 Route::get('/nutritionp2', 'NutritionController@nutritionp2')->name('nutritionp2');
 
 Route::get('/nutritionp3', 'NutritionController@nutritionp3')->name('nutritionp3');
+
+Route::get('/nutritionp4', 'NutritionController@nutritionp4')->name('nutritionp4');

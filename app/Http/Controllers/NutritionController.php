@@ -22,4 +22,8 @@ class NutritionController extends Controller
     {
         return view('nutritionproducts.nutritionp3');
     }
+    public function nutritionp4()
+    {
+        return view('nutritionproducts.nutritionp4');
+    }
 }

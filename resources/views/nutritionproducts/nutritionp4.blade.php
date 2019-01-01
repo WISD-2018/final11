@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>狗糧福利社-營養品-原生營養保健-幼犬成長發育配方 50g(p3)</title>
+    <title>狗糧福利社-營養品-愛犬專用綜合維他命+葡萄糖胺(p4)</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -67,16 +67,16 @@
         <div class="col-lg-9">
 
             <div class="card mt-4">
-                <img class="card-img-top img-fluid" src="http://e.ecimg.tw/items/QFAW5GA9008VAKH/000001_1521624211.jpg" alt="">
+                <img class="card-img-top img-fluid" src="http://www.books.com.tw/img/N00/066/91/N000669166_t_05.png" alt="">
                 <div class="card-body">
-                    <h3 class="card-title">原生營養保健-幼犬成長發育配方 50g</h3>
-                    <h4>NTD 429</h4>
+                    <h3 class="card-title">愛犬專用綜合維他命+葡萄糖胺</h3>
+                    <h4>NTD 1390</h4>
                     <p class="card-text">
-                    <li>幫助初生幼齡犬成長所需</li>
-                    <li>豐富原生天然營養有利寵物身體吸收</li>
-                    <li>補充維他命A至Zinc</li>
-                    <li>富含珍貴海洋食材</li>
-                    <li>適合：任何年齡貓犬服用。特別幼年階段</li>
+                    <li>健康皮膚及毛髮</li>
+                    <li>補充活力</li>
+                    <li>膳食纖維幫助消化</li>
+                    <li>100%純天然配方</li>
+                    <li>cGMP製造標準</li>
                     </p>
                     <p>
                         <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>

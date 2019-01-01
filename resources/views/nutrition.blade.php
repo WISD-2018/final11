@@ -111,12 +111,17 @@
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <a href="#"><img class="card-img-top" src="http://www.books.com.tw/img/N00/066/91/N000669166_t_05.png" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Project Four</a>
+                <a href="{{ route('nutritionp4') }}">愛犬專用綜合維他命+葡萄糖胺</a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+              <p class="card-text">
+              <li>健康皮膚及毛髮</li>
+              <li>補充活力</li>
+              <li>膳食纖維幫助消化</li>
+              <li>100%純天然配方</li>
+              <li>cGMP製造標準</li></p>
             </div>
           </div>
         </div>
