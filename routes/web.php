@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//零食路由
 Route::get('/snack', 'SnackController@snack')->name('snack');
 
 Route::get('/snackp1', 'SnackController@snackp1')->name('snackp1');
@@ -29,6 +30,10 @@ Route::get('/snackp3', 'SnackController@snackp3')->name('snackp3');
 
 Route::get('/snackp4', 'SnackController@snackp4')->name('snackp4');
 
+//飼料路由
 Route::get('/feed', 'FeedController@feed')->name('feed');
 
+Route::get('/feedp1', 'FeedController@feedp1')->name('feedp1');
+
+//營養品路由
 Route::get('/nutrition', 'NutritionController@nutrition')->name('nutrition');

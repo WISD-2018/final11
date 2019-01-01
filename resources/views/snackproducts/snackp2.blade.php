@@ -56,7 +56,8 @@
         <div class="col-lg-3">
             <h1 class="my-4">狗糧福利社</h1>
             <div class="list-group">
-                <a href="{{ route('snack') }}" class="list-group-item active">零食</a>
+                <li class="list-group-item active">分類</li>
+                <a href="{{ route('snack') }}" class="list-group-item list-group-item-action list-group-item-primary">零食</a>
                 <a href="{{ route('feed') }}" class="list-group-item">飼料</a>
                 <a href="{{ route('nutrition') }}" class="list-group-item">營養品</a>
             </div>

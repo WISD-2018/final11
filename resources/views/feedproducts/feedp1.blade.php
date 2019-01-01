@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>狗糧福利社-零食-天然手作零食-雞肉脆片100g(p3)</title>
+    <title>狗糧福利社-飼料-乾狗糧-牛肉口味15kg(p1)</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -57,8 +57,8 @@
             <h1 class="my-4">狗糧福利社</h1>
             <div class="list-group">
                 <li class="list-group-item active">分類</li>
-                <a href="{{ route('snack') }}" class="list-group-item list-group-item-action list-group-item-primary">零食</a>
-                <a href="{{ route('feed') }}" class="list-group-item">飼料</a>
+                <a href="{{ route('snack') }}" class="list-group-item">零食</a>
+                <a href="{{ route('feed') }}" class="list-group-item list-group-item-action list-group-item-primary">飼料</a>
                 <a href="{{ route('nutrition') }}" class="list-group-item">營養品</a>
             </div>
         </div>
@@ -67,16 +67,16 @@
         <div class="col-lg-9">
 
             <div class="card mt-4">
-                <img class="card-img-top img-fluid" src="https://image.suning.cn/uimg/b2c/newcatentries/0070144353-000000000167574468_2.jpg_800w_800h_4e" alt="">
+                <img class="card-img-top img-fluid" src="https://b.ecimg.tw/items/DEBV7G19008BG0Y/000001_1542272313.jpg" alt="">
                 <div class="card-body">
-                    <h3 class="card-title">烘培點心 水果夾心餅/迷你潔牙餅/蔬菜起司餅 500g</h3>
-                    <h4>NTD 360</h4>
+                    <h3 class="card-title">乾狗糧-牛肉口味15kg</h3>
+                    <h4>NTD 939</h4>
                     <p class="card-text">
-                    <li>添加起司富含豐富鈣質</li>
-                    <li>添加菜籽油補充Omega 3及6脂肪酸</li>
-                    <li>含天然維他命E及大量纖維質</li>
-                    <li>礦物質及天然抗氧化劑</li>
-                    <li>低卡路里輕食無負擔</li>
+                    <li>理想比例的Omega3&6</li>
+                    <li>富含維生素E、D</li>
+                    <li>複合碳化合物</li>
+                    <li>富含鈣、磷、鋅</li>
+                    <li>優化蛋白質</li>
                     </p>
                     <p>
                         <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
