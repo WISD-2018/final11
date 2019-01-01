@@ -14,4 +14,8 @@ class FeedController extends Controller
     {
         return view('feedproducts.feedp1');
     }
+    public function feedp2()
+    {
+        return view('feedproducts.feedp2');
+    }
 }

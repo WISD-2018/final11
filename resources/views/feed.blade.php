@@ -79,12 +79,16 @@
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <a href="#"><img class="card-img-top" src="https://ct.yimg.com/xd/api/res/1.2/w2H66OP_OydA0uauMSMEcA--/YXBwaWQ9eXR3YXVjdGlvbnNlcnZpY2U7aD0xMDAwO3E9ODU7cm90YXRlPWF1dG87dz0xMDAw/https://s.yimg.com/ob/image/1421cce6-8090-4c40-876a-18b5a2fd57d5.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Project Two</a>
+                <a href="{{ route('feedp2') }}">寵物食譜國產新配方 (羊肉+七蔬果) 狗飼料 15kg</a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+              <p class="card-text">
+              <li>富含DHA&鱈魚油</li>
+              <li>天然紅羅蔔素及維生素A</li>
+              <li>幫助寵物提升免疫力</li>
+              <li>毛髮柔亮配方</li></p>
             </div>
           </div>
         </div>
