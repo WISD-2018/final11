@@ -95,12 +95,17 @@
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <a href="#"><img class="card-img-top" src="http://e.ecimg.tw/items/QFAW5GA9008VAKH/000001_1521624211.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Project Three</a>
+                <a href="{{ route('nutritionp3') }}">原生營養保健-幼犬成長發育配方 50g</a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
+              <p class="card-text">
+              <li>幫助初生幼齡犬成長所需</li>
+              <li>豐富原生天然營養</li>
+              <li>補充維他命A至Zinc</li>
+              <li>富含珍貴海洋食材</li>
+              <li>任何年齡適用(特別是幼犬)</li></p>
             </div>
           </div>
         </div>
