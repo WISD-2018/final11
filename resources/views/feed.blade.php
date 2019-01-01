@@ -94,12 +94,19 @@
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <a href="#"><img class="card-img-top" src="https://d.ecimg.tw/items/DEBV7GA9008G0JR/000001_1506677672.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Project Three</a>
+                <a href="{{ route('feedp3') }}">健康主義無榖犬糧-放牧羊454g</a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
+              <p class="card-text">
+              <li>保護胃壁幫助消化</li>
+              <li>促進新陳代謝</li>
+              <li>抗老化</li>
+              <li>尿道系統健康</li>
+              <li>避免寵物罹患皮膚疾病</li>
+              <li>舒緩脹氣及減緩焦慮</li>
+              </p>
             </div>
           </div>
         </div>
