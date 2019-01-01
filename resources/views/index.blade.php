@@ -73,45 +73,66 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
                         <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <a href="#"><img class="card-img-top" src="https://img13.360buyimg.com/n1/jfs/t1/973/23/9607/303561/5bac5ccaE6cd60300/6449aca6a0ff95bd.jpg" alt=""></a>
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    <a href="#">Top One</a>
+                                    <a href="{{ route('snackp2') }}">天然手作零食-雞肉脆片100g</a>
                                 </h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+                                <p class="card-text">
+                                <li>純天然肉品</li>
+                                <li>無任何添加物</li>
+                                <li>手工處理食材</li>
+                                <li>去除多餘脂肪</li>
+                                <li>低溫烘焙</li>
+                                <li>營養不流失</li>
+                                </p>
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
                         <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <a href="#"><img class="card-img-top" src="https://b.ecimg.tw/items/DEBV7G19008BG0Y/000001_1542272313.jpg" alt=""></a>
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    <a href="#">Top Two</a>
+                                    <a href="{{ route('feedp1') }}">乾狗糧-牛肉口味15kg</a>
                                 </h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                                <p class="card-text">
+                                <li>Omega3&6</li>
+                                <li>含維生素E、D</li>
+                                <li>複合碳化合物</li>
+                                <li>含鈣、磷、鋅</li>
+                                <li>優化蛋白質</li></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
                         <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <a href="#"><img class="card-img-top" src="http://www.books.com.tw/img/N00/066/91/N000669166_t_05.png" alt=""></a>
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    <a href="#">Top Three</a>
+                                    <a href="{{ route('nutritionp4') }}">愛犬專用綜合維他命+葡萄糖胺</a>
                                 </h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
+                                <p class="card-text">
+                                <li>健康皮毛</li>
+                                <li>補充活力</li>
+                                <li>膳食纖維</li>
+                                <li>純天然配方</li>
+                                <li>cGMP製造標準</li></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
                         <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <a href="#"><img class="card-img-top" src="https://b.ecimg.tw/items/DEAK00A84176109/000001_1545789296.jpg" alt=""></a>
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    <a href="#">Top Four</a>
+                                    <a href="{{ route('snackp4') }}">多效雙刷頭潔牙骨 家庭號桶裝 1400g</a>
                                 </h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                                <p class="card-text">
+                                <li>安心配方</li>
+                                <li>維持口腔健康</li>
+                                <li>降低口腔異味</li></p>
                             </div>
                         </div>
                     </div>
