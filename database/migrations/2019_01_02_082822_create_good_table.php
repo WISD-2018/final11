@@ -14,7 +14,7 @@ class CreateGoodTable extends Migration
     public function up()
     {
         Schema::create('good', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('goodid');
             $table->string('goodname');
             $table->integer('price');
             $table->integer('quantity');
