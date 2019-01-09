@@ -22,7 +22,7 @@ Route::get('/back', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('index');
 
 //零食路由
 Route::get('/snack', 'SnackController@snack')->name('snack');
