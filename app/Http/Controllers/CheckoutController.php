@@ -1,32 +1,53 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\Product;
-use App\Services\Cart;
+use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
+
+use DB;
+use App\Cart;
+use App\Order;
+use Illuminate\Support\Facades\Auth;
 
 class CheckoutController extends Controller
 {
-    public function index(Request $request, Cart $cart)
+    public function store(Request $request)
     {
-        if ($request->has('products')) {
-            foreach ($request->input('products') as $item) {
-                $product = Product::findOrFail($item['id']);
-                foreach (range(1, $item['quantity']) as $time) {
-                    $cart->add($product);
-                }
-            }
+        Order::create($request->all());
+        $count =  DB::table('orders')->orderby('id','Desc')->value('id');
+        DB::table('orders')->where('users_id',null)->update(
+            [
+                'users_id'=>Auth::user()->id,
+            ]
+        );
+        while ($row = Cart::where('users_id',Auth::user()->id)->first() != null){
+            $cart = Cart::where('users_id',Auth::user()->id)->first();
+            DB::table('ordersdetail')->insert(
+                [
+                    'qty' => $cart->qty,
+                    'product' => $cart->product,
+                    'cost' => $cart->cost,
+                    'total' => $cart->total,
+                    'users_id' => Auth::user()->id,
+                    'orders_id' => $count
+                ]
+            );
+            Cart::where('users_id',Auth::user()->id)->first()->delete();
         }
-
-        $totalCount = $cart->count();
-        $totalAmount = $cart->totalAmount();
-
-        $data = [
-            'totalCount' => $totalCount,
-            'totalAmount' => $totalAmount,
-        ];
-
-        return view('checkout.index', $data);
+        return redirect()->route('main.user');
     }
+
+    public function cartdetail()
+    {
+        $all = 0;
+        $data = DB::table('carts')
+            ->where('users_id', Auth::user()->id)
+            ->get();
+        foreach ($data as $s) {
+            $all = $all + $s->total;
+        }
+        return view('checkout', ['checkouts' => $data, 'a' => $all]);
+
+    }
+
 }

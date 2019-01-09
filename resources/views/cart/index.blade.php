@@ -1,57 +1,91 @@
-@extends('layouts.master')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('page-title', '購物車')
+<head>
 
-@section('page-style')
-<link href="{{ asset('css/form-validation.css') }}" rel="stylesheet">
-@endsection
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-@section('page-script')
-@endsection
+    <title>狗糧福利社</title>
 
-@section('page-content')
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/shop-item.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-        <div class="py-5 text-center">
-            <img class="d-block mx-auto mb-4" src="{{ asset('svg/bootstrap-solid.svg') }}" alt="" width="72" height="72">
-            <h2>購物車</h2>
-            <p class="lead">請選擇您想要購買的商品數量</p>
+        <a class="navbar-brand" href="/">狗糧福利社</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">登入</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('register') }}">註冊</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">購物車</a>
+                </li>
+            </ul>
         </div>
+    </div>
+</nav>
 
-        <div class="row">
-            <div class="col-md-12 order-md-12 mb-12">
-                <h4 class="d-flex justify-content-between align-items-center mb-3">
-                    <span class="text-muted">待購清單</span>
-                </h4>
-                <form action="{{ route('checkout.index') }}" method="post" accept-charset="UTF-8">
+<!-- Page Content -->
+<div class="container">
 
-                    @csrf
+    <div class="row">
 
-                    <ul class="list-group mb-3">
-                        @foreach($products as $index => $produst)
-                        <li class="list-group-item d-flex justify-content-between lh-condensed">
-                            <div class="col-9">
-                                <h6 class="my-0">{{ $produst->name }}</h6>
-                                <small class="text-muted">{{ $produst->description }}</small>
-                                <input type="hidden" name="products[{{ $index }}][id]" value="{{ $produst->id }}">
-                            </div>
-                            <div class="col-2">
-                                <select name="products[{{ $index }}][quantity]" class="form-control form-control-sm">
-                                    @foreach(range(1, 10) as $quantity)
-                                    <option>{{ $quantity }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="col-1">
-                                <span class="text-muted">$ {{ $produst->price }}</span>
-                            </div>
-                        </li>
-                        @endforeach
-                    </ul>
-                    <div class="text-right">
-                        <button type="submit" class="btn btn-secondary">結帳</button>
-                    </div>
-                </form>
+        <div class="col-lg-3">
+
             </div>
         </div>
-   </div>
-@endsection
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+//
+
+                    </div>
+                </div>
+                <!-- /.card -->
+
+            </div>
+            <!-- /.col-lg-9 -->
+
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
