@@ -74,3 +74,6 @@ Route::get('/forgotpassword', 'BackController@forgotpassword')->name('forgotpass
 
 Route::get('/tables', 'BackController@tables')->name('tables');
 
+Route::get('cart', 'CartController@index')->name('cart.index');
+
+Route::post('checkout', 'CheckoutController@index')->name('checkout.index');
