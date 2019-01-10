@@ -27,13 +27,8 @@ Route::get('/home', 'HomeController@index')->name('index');
 //零食路由
 Route::get('/snack', 'SnackController@snack')->name('snack');
 
-Route::get('/snackp1', 'SnackController@snackp1')->name('snackp1');
-
-Route::get('/snackp2', 'SnackController@snackp2')->name('snackp2');
-
-Route::get('/snackp3', 'SnackController@snackp3')->name('snackp3');
-
-Route::get('/snackp4', 'SnackController@snackp4')->name('snackp4');
+Route::get('/snack/{id}', 'SnackController@snackdetail', function ($id) {
+})->name('snack.detail');
 
 //飼料路由
 Route::get('/feed', 'FeedController@feed')->name('feed');
@@ -75,5 +70,8 @@ Route::get('/forgotpassword', 'BackController@forgotpassword')->name('forgotpass
 Route::get('/tables', 'BackController@tables')->name('tables');
 
 Route::get('/cart', 'CartController@index')->name('cart.index');
+
+Route::get('/cart/{id}', 'CartController@add', function ($id) {
+})->name('cart.add');
 
 Route::post('/checkout', 'CheckoutController@index')->name('checkout.index');

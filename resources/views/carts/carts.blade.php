@@ -58,17 +58,41 @@
             </div>
         </div>
         <!-- /.col-lg-3 -->
-
         <div class="col-lg-9">
-//
 
                     </div>
                 </div>
                 <!-- /.card -->
-
             </div>
             <!-- /.col-lg-9 -->
+<center>
+    <table>
+        @foreach ($carts as $cart)
+            <tr >
+                <td width="400" align="center" valign="center">
+                    <div class="product-right">
+                        <h6>{{$cart->good}}</h6>
 
+                    </div>
+                </td>
+                <td width="200" align="center" valign="center">
+                    <div class="product-right1">
+                        <h6>$ {{($cart->cost)}}</h6>
+                        <div class="close"> </div>
+                    </div>
+                </td>
+                <td width="200" align="center" valign="center">
+                    <div class="clear">
+                        <form action="" method="POST">
+                            {{ csrf_field() }}
+                            {{ method_field('DELETE') }}
+                            <button class="btn btn-link"><img src="{{asset('/img/core-img/close.png')}}"></button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        @endforeach
+    </table>
         </div>
 
     </div>
