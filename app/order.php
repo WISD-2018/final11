@@ -14,4 +14,9 @@ class order extends Model
     public function users(){
         return $this -> belongsTo('app\User');
     }
+    public function carts()
+    {
+        return $this->hasMany('app\Cart');
+    }
 }
+

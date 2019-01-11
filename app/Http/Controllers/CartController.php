@@ -19,10 +19,14 @@ class CartController extends Controller
     {
             $good = DB::table('good')->where('id', $id)->value('goodname');
             $price = DB::table('good')->where('id', $id)->value('price');
-            DB::table('carts')->insert(
+        $pr = DB::table('good')->where('id', $id)->value('price');
+        $photo = DB::table('good')->where('id', $id)->value('photo');
+        DB::table('carts')->insert(
                 [
                     'good' => $good,
+                    'photo' => $photo,
                     'cost' => $price,
+                    'total' =>$pr
                 ]
             );
             return Redirect::to(url()->previous());
@@ -47,21 +51,21 @@ class CartController extends Controller
             [
                 'good3' => $good,
                 'cost' => $price,
+                'total'=>$price
             ]
         );
         return Redirect::to(url()->previous());
     }
-    public function update($id,$q)
+    public function update($id,$quantity)
     {
-        $cost = DB::table('good')->where('id', $id)->value('cost');
+        $c= DB::table('carts')->where('id', $id)->value('cost');
         DB::table('carts')
             ->where('id', $id)
             ->update([
-                'qty' => $q,
-                'total' => $cost * $q
+                'quantity' => $quantity,
+                'total' => $c * $quantity
             ]);
         return Redirect::to(url()->previous());
-
     }
 
     public function delete($id)

@@ -75,12 +75,49 @@
 
                     </div>
                 </td>
+
+                <td width="400" align="center" valign="center">
+                     <div class="product-right1">
+                        <img src="../img/good/{{$cart->photo}}">
+                    </div>
+                </td>
+
                 <td width="200" align="center" valign="center">
                     <div class="product-right1">
                         <h6>$ {{($cart->cost)}}</h6>
                         <div class="close"> </div>
                     </div>
                 </td>
+
+                <td width="50" align="center" valign="center">
+                    <div class="product-right1">
+                        <h6>{{$cart->quantity}}</h6>
+                    </div>
+                </td>
+                <td width="5" align="center" valign="center">
+                    <div class="product-right1">
+                        <select name="quantity" onchange="javascript:location.href=this.value;">
+                            <option value="">數量修改</option>
+                            <option value="{{route('cart.update',['id'=>$cart->id,'quantity'=>'1'])}}">1</option>
+                            <option value="{{route('cart.update',['id'=>$cart->id,'quantity'=>'2'])}}">2</option>
+                            <option value="{{route('cart.update',['id'=>$cart->id,'quantity'=>'3'])}}">3</option>
+                            <option value="{{route('cart.update',['id'=>$cart->id,'quantity'=>'4'])}}">4</option>
+                            <option value="{{route('cart.update',['id'=>$cart->id,'quantity'=>'5'])}}">5</option>
+                            <option value="{{route('cart.update',['id'=>$cart->id,'quantity'=>'6'])}}">6</option>
+                            <option value="{{route('cart.update',['id'=>$cart->id,'quantity'=>'7'])}}">7</option>
+                            <option value="{{route('cart.update',['id'=>$cart->id,'quantity'=>'8'])}}">8</option>
+                            <option value="{{route('cart.update',['id'=>$cart->id,'quantity'=>'9'])}}">9</option>
+                            <option value="{{route('cart.update',['id'=>$cart->id,'quantity'=>'10'])}}">10</option>
+                        </select>
+                    </div>
+                </td>
+
+                <td width="200" align="center" valign="center">
+                    <div class="product-right1">
+                        <h6>$ {{($cart->total)}}</h6>
+                        <div class="close"> </div>
+                    </div>
+
                 <td width="200" align="center" valign="center">
                     <div class="clear">
                         <form action="{{ route('cart.delete', $cart->id) }}" method="POST">
@@ -89,6 +126,7 @@
                             <button class="btn btn-link"><img src="{{asset('/img/core-img/close.png')}}"></button>
                         </form>
                     </div>
+                </td>
                 </td>
             </tr>
         @endforeach
