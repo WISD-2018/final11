@@ -11,10 +11,10 @@
     <title>狗糧福利社-零食-手作純肉乾(p1)</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/shop-item.css" rel="stylesheet">
+    <link href="../css/shop-item.css" rel="stylesheet">
 
 </head>
 
@@ -63,30 +63,32 @@
             </div>
         </div>
         <!-- /.col-lg-3 -->
-
+        @foreach ($goods as $good)
         <div class="col-lg-9">
 
             <div class="card mt-4">
-                <img class="card-img-top img-fluid" src="https://img.shop.com/Image/260000/264800/264853/products/1715704876__400x400__.jpg" alt="">
+                <img src="../img/good-img/{{$good->photo}}" alt="">
+                <img class="card-img-top img-fluid" src="../img/good/{{$good->photo}}" alt="">
                 <div class="card-body">
-                    <h3 class="card-title">手作純肉乾</h3>
-                    <h4>NTD 520</h4>
+
+                    <h3 class="card-title">{{$good->goodname}} </h3>
+                    <h4>NTD {{$good->price}}</h4>
                     <p class="card-text">
-                        <li>番茄牛肉切條：80公克±3g</li>
-                        <li>鱉蛋雞肉條：90公克±3g</li>
-                        <li>蔓越莓雞肉切條：90公克±3g</li>
-                        <li>起司雞肉方塊：100公克±3g</li>
-                        <li>蘋果牛肉方塊：80公克±3g</li>
+                        {{$good->gooddetail}}
+
                     </p>
                     <p>
                     <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
                     4顆星
                     </p>
-                    <a href="#" class="btn btn-info">加入購物車</a>
+                    <a href="{{route('cart.add',['id'=>$good->id])}}" class="btn btn-info">加入購物車</a>
                 </div>
             </div>
             <!-- /.card -->
 
+
+
+         @endforeach
             <div class="card card-outline-secondary my-4">
                 <div class="card-header">
                     產品評論
@@ -121,6 +123,8 @@
     </div>
     <!-- /.container -->
 </footer>
+
+
 
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>

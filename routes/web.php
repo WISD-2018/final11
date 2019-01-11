@@ -15,27 +15,27 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/back', function () {
+    return view('back.backindex');
+});
+
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('index');
 
 //零食路由
 Route::get('/snack', 'SnackController@snack')->name('snack');
 
-Route::get('/snackp1', 'SnackController@snackp1')->name('snackp1');
-
-Route::get('/snackp2', 'SnackController@snackp2')->name('snackp2');
-
-Route::get('/snackp3', 'SnackController@snackp3')->name('snackp3');
-
-Route::get('/snackp4', 'SnackController@snackp4')->name('snackp4');
+Route::get('/snack/{id}', 'SnackController@snackdetail', function ($id) {
+})->name('snack.detail');
 
 //飼料路由
 Route::get('/feed', 'FeedController@feed')->name('feed');
 
 Route::get('/feedp1', 'FeedController@feedp1')->name('feedp1');
 
-Route::get('/feedp2', 'FeedController@feedp2')->name('feedp2');
+Route::get('/feedp2 ', 'FeedController@feedp2')->name('feedp2');
 
 Route::get('/feedp3', 'FeedController@feedp3')->name('feedp3');
 
@@ -51,3 +51,36 @@ Route::get('/nutritionp2', 'NutritionController@nutritionp2')->name('nutritionp2
 Route::get('/nutritionp3', 'NutritionController@nutritionp3')->name('nutritionp3');
 
 Route::get('/nutritionp4', 'NutritionController@nutritionp4')->name('nutritionp4');
+
+//後台管理
+Route::get('/back', 'BackController@back')->name('back');
+
+Route::get('/error', 'BackController@error')->name('error');
+
+Route::get('/backlogin', 'BackController@backlogin')->name('backlogin');
+
+Route::get('/backregister', 'BackController@backregister')->name('backregister');
+
+Route::get('/blank', 'BackController@blank')->name('blank');
+
+Route::get('/charts', 'BackController@charts')->name('charts');
+
+Route::get('/forgotpassword', 'BackController@forgotpassword')->name('forgotpassword');
+
+Route::get('/tables', 'BackController@tables')->name('tables');
+
+Route::get('/cart', 'CartController@index')->name('cart.index');
+
+//購物車新增
+Route::get('/cart/{id}', 'CartController@add', function ($id) {
+})->name('cart.add');
+
+//購物車更新
+Route::get('cart/{id}/{q}', 'CartController@update',function($id,$q){
+})->name('cart.update');
+
+//購物車刪除
+Route::delete('cart/delete/{id}','CartController@delete',function($id){
+})->name('cart.delete');
+
+Route::post('/checkout', 'CheckoutController@index')->name('checkout.index');

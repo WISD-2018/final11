@@ -3,27 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class SnackController extends Controller
 {
     public function snack()
     {
-        return view('snack');
+        $data = DB::table('good')->get();;
+        return view('snack', ['goods' => $data]);
     }
-    public function snackp1()
+    public function snackdetail($id)
     {
-        return view('snackproducts.snackp1');
-    }
-    public function snackp2()
-    {
-        return view('snackproducts.snackp2');
-    }
-    public function snackp3()
-    {
-        return view('snackproducts.snackp3');
-    }
-    public function snackp4()
-    {
-        return view('snackproducts.snackp4');
+        $data = DB::table('good')->where('id',$id)->get();;
+        return view('snackproducts.snackp1', ['goods' => $data]);
     }
 }
