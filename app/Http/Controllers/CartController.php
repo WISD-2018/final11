@@ -23,9 +23,9 @@ class CartController extends Controller
         $photo = DB::table('good')->where('id', $id)->value('photo');
         DB::table('carts')->insert(
                 [
+                    'cost' => $price,
                     'good' => $good,
                     'photo' => $photo,
-                    'cost' => $price,
                     'total' =>$pr
                 ]
             );
@@ -35,10 +35,14 @@ class CartController extends Controller
     {
         $good = DB::table('good2')->where('id', $id)->value('goodname');
         $price = DB::table('good2')->where('id', $id)->value('price');
+        $pr = DB::table('good2')->where('id', $id)->value('price');
+        $photo = DB::table('good2')->where('id', $id)->value('photo');
         DB::table('carts')->insert(
             [
                 'good2' => $good,
                 'cost' => $price,
+                'photo' => $photo,
+                'total' =>$pr
             ]
         );
         return Redirect::to(url()->previous());
@@ -47,11 +51,14 @@ class CartController extends Controller
     {
         $good = DB::table('good3')->where('id', $id)->value('goodname');
         $price = DB::table('good3')->where('id', $id)->value('price');
+        $pr = DB::table('good3')->where('id', $id)->value('price');
+        $photo = DB::table('good3')->where('id', $id)->value('photo');
         DB::table('carts')->insert(
             [
                 'good3' => $good,
                 'cost' => $price,
-                'total'=>$price
+                'photo' => $photo,
+                'total' =>$pr
             ]
         );
         return Redirect::to(url()->previous());

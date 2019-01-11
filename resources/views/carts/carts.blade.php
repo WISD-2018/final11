@@ -76,12 +76,6 @@
                     </div>
                 </td>
 
-                <td width="400" align="center" valign="center">
-                     <div class="product-right1">
-                        <img src="../img/good/{{$cart->photo}}">
-                    </div>
-                </td>
-
                 <td width="200" align="center" valign="center">
                     <div class="product-right1">
                         <h6>$ {{($cart->cost)}}</h6>
@@ -97,7 +91,7 @@
                 <td width="5" align="center" valign="center">
                     <div class="product-right1">
                         <select name="quantity" onchange="javascript:location.href=this.value;">
-                            <option value="">數量修改</option>
+                            <option value="">選擇數量</option>
                             <option value="{{route('cart.update',['id'=>$cart->id,'quantity'=>'1'])}}">1</option>
                             <option value="{{route('cart.update',['id'=>$cart->id,'quantity'=>'2'])}}">2</option>
                             <option value="{{route('cart.update',['id'=>$cart->id,'quantity'=>'3'])}}">3</option>
@@ -131,7 +125,9 @@
             </tr>
         @endforeach
     </table>
-        </div>
+
+
+    </div>
 
     </div>
     <!-- /.container -->
