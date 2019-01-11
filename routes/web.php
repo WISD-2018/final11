@@ -39,13 +39,10 @@ Route::get('/feed/{id}', 'FeedController@feeddetail', function ($id) {
 //營養品路由
 Route::get('/nutrition', 'NutritionController@nutrition')->name('nutrition');
 
-Route::get('/nutritionp1', 'NutritionController@nutritionp1')->name('nutritionp1');
+Route::get('/nutrition/{id}', 'NutritionController@nutritiondetail', function ($id) {
+})->name('nutrition.detail');
 
-Route::get('/nutritionp2', 'NutritionController@nutritionp2')->name('nutritionp2');
 
-Route::get('/nutritionp3', 'NutritionController@nutritionp3')->name('nutritionp3');
-
-Route::get('/nutritionp4', 'NutritionController@nutritionp4')->name('nutritionp4');
 
 //後台管理
 Route::get('/back', 'BackController@back')->name('back');
@@ -72,6 +69,9 @@ Route::get('/cart/{id}', 'CartController@add', function ($id) {
 
 Route::get('/cart2/{id}', 'CartController@add2', function ($id) {
 })->name('cart.add2');
+
+Route::get('/cart3/{id}', 'CartController@add3', function ($id) {
+})->name('cart.add3');
 
 //購物車更新
 Route::get('cart/{id}/{q}', 'CartController@update',function($id,$q){
