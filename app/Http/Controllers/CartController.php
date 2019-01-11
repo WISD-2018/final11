@@ -26,5 +26,29 @@ class CartController extends Controller
             );
             return Redirect::to(url()->previous());
     }
+    public function add2($id)
+    {
+        $good = DB::table('good2')->where('id', $id)->value('goodname');
+        $price = DB::table('good2')->where('id', $id)->value('price');
+        DB::table('carts')->insert(
+            [
+                'good2' => $good,
+                'cost' => $price,
+            ]
+        );
+        return Redirect::to(url()->previous());
+    }
+    public function add3($id)
+    {
+        $good = DB::table('good3')->where('id', $id)->value('goodname');
+        $price = DB::table('good3')->where('id', $id)->value('price');
+        DB::table('carts')->insert(
+            [
+                'good3' => $good,
+                'cost' => $price,
+            ]
+        );
+        return Redirect::to(url()->previous());
+    }
 }
 
