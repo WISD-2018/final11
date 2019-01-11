@@ -33,13 +33,8 @@ Route::get('/snack/{id}', 'SnackController@snackdetail', function ($id) {
 //飼料路由
 Route::get('/feed', 'FeedController@feed')->name('feed');
 
-Route::get('/feedp1', 'FeedController@feedp1')->name('feedp1');
-
-Route::get('/feedp2 ', 'FeedController@feedp2')->name('feedp2');
-
-Route::get('/feedp3', 'FeedController@feedp3')->name('feedp3');
-
-Route::get('/feedp4', 'FeedController@feedp4')->name('feedp4');
+Route::get('/feed/{id}', 'FeedController@feeddetail', function ($id) {
+})->name('feed.detail');
 
 //營養品路由
 Route::get('/nutrition', 'NutritionController@nutrition')->name('nutrition');
@@ -74,6 +69,9 @@ Route::get('/cart', 'CartController@index')->name('cart.index');
 //購物車新增
 Route::get('/cart/{id}', 'CartController@add', function ($id) {
 })->name('cart.add');
+
+Route::get('/cart2/{id}', 'CartController@add2', function ($id) {
+})->name('cart.add2');
 
 //購物車更新
 Route::get('cart/{id}/{q}', 'CartController@update',function($id,$q){

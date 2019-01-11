@@ -3,27 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class FeedController extends Controller
 {
+
     public function feed()
     {
-        return view('feed');
+        $data = DB::table('good2')->get();;
+        return view('feed', ['goods' => $data]);
     }
-    public function feedp1()
+    public function feeddetail($id)
     {
-        return view('feedproducts.feedp1');
-    }
-    public function feedp2()
-    {
-        return view('feedproducts.feedp2');
-    }
-    public function feedp3()
-    {
-        return view('feedproducts.feedp3');
-    }
-    public function feedp4()
-    {
-        return view('feedproducts.feedp4');
+        $data = DB::table('good2')->where('id',$id)->get();;
+        return view('feedproducts.feedp1', ['goods' => $data]);
     }
 }
