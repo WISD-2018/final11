@@ -39,7 +39,7 @@ class CartController extends Controller
         $photo = DB::table('good2')->where('id', $id)->value('photo');
         DB::table('carts')->insert(
             [
-                'good2' => $good,
+                'good' => $good,
                 'cost' => $price,
                 'photo' => $photo,
                 'total' =>$pr
@@ -55,7 +55,7 @@ class CartController extends Controller
         $photo = DB::table('good3')->where('id', $id)->value('photo');
         DB::table('carts')->insert(
             [
-                'good3' => $good,
+                'good' => $good,
                 'cost' => $price,
                 'photo' => $photo,
                 'total' =>$pr
