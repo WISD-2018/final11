@@ -83,4 +83,3 @@ Route::get('cart/{id}/{q}', 'CartController@update',function($id,$q){
 Route::delete('cart/delete/{id}','CartController@delete',function($id){
 })->name('cart.delete');
 
-Route::post('/checkout', 'CheckoutController@index')->name('checkout.index');
