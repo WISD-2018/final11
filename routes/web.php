@@ -35,7 +35,7 @@ Route::get('/feed', 'FeedController@feed')->name('feed');
 
 Route::get('/feedp1', 'FeedController@feedp1')->name('feedp1');
 
-Route::get('/feedp2', 'FeedController@feedp2')->name('feedp2');
+Route::get('/feedp2 ', 'FeedController@feedp2')->name('feedp2');
 
 Route::get('/feedp3', 'FeedController@feedp3')->name('feedp3');
 
@@ -71,7 +71,16 @@ Route::get('/tables', 'BackController@tables')->name('tables');
 
 Route::get('/cart', 'CartController@index')->name('cart.index');
 
+//購物車新增
 Route::get('/cart/{id}', 'CartController@add', function ($id) {
 })->name('cart.add');
+
+//購物車更新
+Route::get('cart/{id}/{q}', 'CartController@update',function($id,$q){
+})->name('cart.update');
+
+//購物車刪除
+Route::delete('cart/delete/{id}','CartController@delete',function($id){
+})->name('cart.delete');
 
 Route::post('/checkout', 'CheckoutController@index')->name('checkout.index');

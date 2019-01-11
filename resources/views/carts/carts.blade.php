@@ -83,7 +83,7 @@
                 </td>
                 <td width="200" align="center" valign="center">
                     <div class="clear">
-                        <form action="" method="POST">
+                        <form action="{{ route('cart.delete', $cart->id) }}" method="POST">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
                             <button class="btn btn-link"><img src="{{asset('/img/core-img/close.png')}}"></button>

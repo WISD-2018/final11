@@ -63,7 +63,7 @@
       <div class="row">
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="https://img.shop.com/Image/260000/264800/264853/products/1715704876__400x400__.jpg" alt=""></a>
+            <a href="#"><img class="card-img-top" src="../img/good/{{$good->photo}}" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
                 <a href="{{ route('snack.detail',['id'=>$good->id]) }}">{{$good->goodname}}</a>

@@ -67,12 +67,15 @@
         <div class="col-lg-9">
 
             <div class="card mt-4">
-                <img class="card-img-top img-fluid" src="https://img.shop.com/Image/260000/264800/264853/products/1715704876__400x400__.jpg" alt="">
+                <img src="../img/good-img/{{$good->photo}}" alt="">
+                <img class="card-img-top img-fluid" src="../img/good/{{$good->photo}}" alt="">
                 <div class="card-body">
+
                     <h3 class="card-title">{{$good->goodname}} </h3>
                     <h4>NTD {{$good->price}}</h4>
                     <p class="card-text">
                         {{$good->gooddetail}}
+
                     </p>
                     <p>
                     <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
@@ -82,6 +85,9 @@
                 </div>
             </div>
             <!-- /.card -->
+
+
+
          @endforeach
             <div class="card card-outline-secondary my-4">
                 <div class="card-header">
@@ -117,6 +123,8 @@
     </div>
     <!-- /.container -->
 </footer>
+
+
 
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
