@@ -33,24 +33,16 @@ Route::get('/snack/{id}', 'SnackController@snackdetail', function ($id) {
 //飼料路由
 Route::get('/feed', 'FeedController@feed')->name('feed');
 
-Route::get('/feedp1', 'FeedController@feedp1')->name('feedp1');
-
-Route::get('/feedp2 ', 'FeedController@feedp2')->name('feedp2');
-
-Route::get('/feedp3', 'FeedController@feedp3')->name('feedp3');
-
-Route::get('/feedp4', 'FeedController@feedp4')->name('feedp4');
+Route::get('/feed/{id}', 'FeedController@feeddetail', function ($id) {
+})->name('feed.detail');
 
 //營養品路由
 Route::get('/nutrition', 'NutritionController@nutrition')->name('nutrition');
 
-Route::get('/nutritionp1', 'NutritionController@nutritionp1')->name('nutritionp1');
+Route::get('/nutrition/{id}', 'NutritionController@nutritiondetail', function ($id) {
+})->name('nutrition.detail');
 
-Route::get('/nutritionp2', 'NutritionController@nutritionp2')->name('nutritionp2');
 
-Route::get('/nutritionp3', 'NutritionController@nutritionp3')->name('nutritionp3');
-
-Route::get('/nutritionp4', 'NutritionController@nutritionp4')->name('nutritionp4');
 
 //後台管理
 Route::get('/back', 'BackController@back')->name('back');
@@ -74,6 +66,12 @@ Route::get('/cart', 'CartController@index')->name('cart.index');
 //購物車新增
 Route::get('/cart/{id}', 'CartController@add', function ($id) {
 })->name('cart.add');
+
+Route::get('/cart2/{id}', 'CartController@add2', function ($id) {
+})->name('cart.add2');
+
+Route::get('/cart3/{id}', 'CartController@add3', function ($id) {
+})->name('cart.add3');
 
 //購物車更新
 Route::get('cart/{id}/{q}', 'CartController@update',function($id,$q){

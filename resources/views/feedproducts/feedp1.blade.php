@@ -8,13 +8,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>狗糧福利社-飼料-乾狗糧-牛肉口味15kg(p1)</title>
+    <title>狗糧福利社-飼料</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/shop-item.css" rel="stylesheet">
+    <link href="../css/shop-item.css" rel="stylesheet">
 
 </head>
 
@@ -63,51 +63,53 @@
             </div>
         </div>
         <!-- /.col-lg-3 -->
+        @foreach ($goods as $good2)
+            <div class="col-lg-9">
 
-        <div class="col-lg-9">
+                <div class="card mt-4">
+                    <img src="../img/good2-img/{{$good2->photo}}" alt="">
+                    <img class="card-img-top img-fluid" src="../img/good2/{{$good2->photo}}" alt="">
+                    <div class="card-body">
 
-            <div class="card mt-4">
-                <img class="card-img-top img-fluid" src="https://b.ecimg.tw/items/DEBV7G19008BG0Y/000001_1542272313.jpg" alt="">
-                <div class="card-body">
-                    <h3 class="card-title">乾狗糧-牛肉口味15kg</h3>
-                    <h4>NTD 939</h4>
-                    <p class="card-text">
-                    <li>理想比例的Omega3&6</li>
-                    <li>富含維生素E、D</li>
-                    <li>複合碳化合物</li>
-                    <li>富含鈣、磷、鋅</li>
-                    <li>優化蛋白質</li>
-                    </p>
-                    <p>
-                        <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
-                        4顆星
-                    </p>
-                    <a href="#" class="btn btn-info">加入購物車</a>
+                        <h3 class="card-title">{{$good2->goodname}} </h3>
+                        <h4>NTD {{$good2->price}}</h4>
+                        <p class="card-text">
+                            {{$good2->gooddetail}}
+
+                        </p>
+                        <p>
+                            <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+                            4顆星
+                        </p>
+                        <a href="{{route('cart.add2',['id'=>$good2->id])}}" class="btn btn-info">加入購物車</a>
+                    </div>
                 </div>
+                <!-- /.card -->
+
+
+
+                @endforeach
+                <div class="card card-outline-secondary my-4">
+                    <div class="card-header">
+                        產品評論
+                    </div>
+                    <div class="card-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+                        <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+                        <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+                        <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                        <hr>
+                        <a href="#" class="btn btn-success">Top</a>
+                    </div>
+                </div>
+                <!-- /.card -->
+
             </div>
-            <!-- /.card -->
-
-            <div class="card card-outline-secondary my-4">
-                <div class="card-header">
-                    產品評論
-                </div>
-                <div class="card-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                    <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                    <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                    <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                    <hr>
-                    <a href="#" class="btn btn-success">Top</a>
-                </div>
-            </div>
-            <!-- /.card -->
-
-        </div>
-        <!-- /.col-lg-9 -->
+            <!-- /.col-lg-9 -->
 
     </div>
 
@@ -121,6 +123,8 @@
     </div>
     <!-- /.container -->
 </footer>
+
+
 
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>

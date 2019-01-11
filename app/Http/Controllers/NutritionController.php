@@ -3,27 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class NutritionController extends Controller
 {
     public function nutrition()
     {
-        return view('nutrition');
+        $data = DB::table('good3')->get();;
+        return view('nutrition', ['goods' => $data]);
     }
-    public function nutritionp1()
+    public function nutritiondetail($id)
     {
-        return view('nutritionproducts.nutritionp1');
-    }
-    public function nutritionp2()
-    {
-    return view('nutritionproducts.nutritionp2');
-    }
-    public function nutritionp3()
-    {
-        return view('nutritionproducts.nutritionp3');
-    }
-    public function nutritionp4()
-    {
-        return view('nutritionproducts.nutritionp4');
+        $data = DB::table('good3')->where('id',$id)->get();;
+        return view('nutritionproducts.nutritionp1', ['goods' => $data]);
     }
 }

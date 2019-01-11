@@ -8,13 +8,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>狗糧福利社-營養品-全護營養系列-高齡犬配方（農場鮮雞+糙米+地瓜）7kg(p1)</title>
+    <title>狗糧福利社-營養品</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/shop-item.css" rel="stylesheet">
+    <link href="../css/shop-item.css" rel="stylesheet">
 
 </head>
 
@@ -63,52 +63,53 @@
             </div>
         </div>
         <!-- /.col-lg-3 -->
+        @foreach ($goods as $good3)
+            <div class="col-lg-9">
 
-        <div class="col-lg-9">
+                <div class="card mt-4">
+                    <img src="../img/good2-img/{{$good3->photo}}" alt="">
+                    <img class="card-img-top img-fluid" src="../img/good3/{{$good3->photo}}" alt="">
+                    <div class="card-body">
 
-            <div class="card mt-4">
-                <img class="card-img-top img-fluid" src="https://image-cdn-flare.qdm.cloud/q61484b9fbe11d/image/cache/data/feed/NUTRO/Essentials/Senior/Chicken/9dd369233110ee0489742c18740f687f_1-cr-200x200.jpg" alt="">
-                <div class="card-body">
-                    <h3 class="card-title">全護營養系列-高齡犬配方（農場鮮雞+糙米+地瓜）7kg</h3>
-                    <h4>NTD 1750</h4>
-                    <p class="card-text">
-                    <li>優質鮮肉為第一成分，適口性強</li>
-                    <li>優質配方有助維持認知健康</li>
-                    <li>抗氧化物有助熟齡犬維持健康的抵抗力</li>
-                    <li>Omega 3&6脂肪酸有助皮膚健康、毛髮柔軟亮麗</li>
-                    <li>葡萄糖胺及軟骨素有助於關節保健</li>
-                    <li>七歲以上高齡犬專用</li>
-                    </p>
-                    <p>
-                        <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
-                        4顆星
-                    </p>
-                    <a href="#" class="btn btn-info">加入購物車</a>
+                        <h3 class="card-title">{{$good3->goodname}} </h3>
+                        <h4>NTD {{$good3->price}}</h4>
+                        <p class="card-text">
+                            {{$good3->gooddetail}}
+
+                        </p>
+                        <p>
+                            <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+                            4顆星
+                        </p>
+                        <a href="{{route('cart.add3',['id'=>$good3->id])}}" class="btn btn-info">加入購物車</a>
+                    </div>
                 </div>
+                <!-- /.card -->
+
+
+
+                @endforeach
+                <div class="card card-outline-secondary my-4">
+                    <div class="card-header">
+                        產品評論
+                    </div>
+                    <div class="card-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+                        <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+                        <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+                        <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                        <hr>
+                        <a href="#" class="btn btn-success">Top</a>
+                    </div>
+                </div>
+                <!-- /.card -->
+
             </div>
-            <!-- /.card -->
-
-            <div class="card card-outline-secondary my-4">
-                <div class="card-header">
-                    產品評論
-                </div>
-                <div class="card-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                    <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                    <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                    <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                    <hr>
-                    <a href="#" class="btn btn-success">Top</a>
-                </div>
-            </div>
-            <!-- /.card -->
-
-        </div>
-        <!-- /.col-lg-9 -->
+            <!-- /.col-lg-9 -->
 
     </div>
 
@@ -122,6 +123,8 @@
     </div>
     <!-- /.container -->
 </footer>
+
+
 
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
