@@ -12,15 +12,7 @@ class BackController extends Controller
     $data = DB::table('good')->get();;
     return view('back.backindex', ['goods' => $data]);
 }
-    public function backlogin()
-    {
-        return view('back.login');
-    }
-    public function backregister()
-    {
-        return view('back.register');
-    }
-
+    
     public function charts()
     {
         return view('back.charts');
