@@ -19,7 +19,6 @@ Route::get('/back', function () {
     return view('back.backindex');
 });
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('index');
