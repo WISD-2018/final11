@@ -51,14 +51,11 @@
   </nav>
 
 
-  //
+
   <!-- Page Content -->
   <div class="container">
-
       <div class="row">
-
           <div class="col-lg-3">
-
               <div class="list-group">
                   <li class="list-group-item active">分類</li>
                   <a href="{{ route('snack') }}" class="list-group-item list-group-item-action list-group-item-primary">零食</a>
@@ -67,7 +64,6 @@
               </div>
           </div>
           <!-- /.col-lg-3 -->
-
           <div class="col-lg-9">
                       <!-- Page Content -->
                       <div class="container">
@@ -95,15 +91,12 @@
                       </div>
                   </div>
                   <!-- /.card -->
-
               </div>
               <!-- /.col-lg-9 -->
-
           </div>
-
       </div>
       <!-- /.container -->
-  //
+
 
 
     <!-- Footer -->
