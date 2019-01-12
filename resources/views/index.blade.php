@@ -69,7 +69,7 @@
           <div class="card mt-4">
             <img class="card-img-top img-fluid" src="https://cdn.shopify.com/s/files/1/0788/5721/articles/bordercollie_1000x_fc20cc02-7ad2-43ea-a302-baf08ab67d3e_1000x.jpg?v=1498036535" alt="">
             <div class="card-body">
-                <h1 class="my-4">熱門商品排行</h1>
+                <h1 class="my-4">好物推薦</h1>
                 <div class="row">
                     <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
                         <div class="card h-100">
