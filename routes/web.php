@@ -63,6 +63,7 @@ Route::get('/tables', 'BackController@tables')->name('tables');
 
 Route::get('/cart', 'CartController@index')->name('cart.index');
 
+
 //購物車新增
 Route::get('/cart/{id}', 'CartController@add', function ($id) {
 })->name('cart.add');
