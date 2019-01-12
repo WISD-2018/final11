@@ -15,10 +15,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/back', function () {
-    return view('back.backindex');
-});
-
+Route::get('/back', 'BackController@back')->name('back');
 
 Auth::routes();
 
