@@ -14,8 +14,8 @@ class CheckoutController extends Controller
     public function store(Request $request)
     {
         Order::create($request->all());
-        $count =  DB::table('orders')->orderby('id','Desc')->value('id');
-        DB::table('orders')->where('users_id',null)->update(
+        $count =  DB::table('order')->orderby('id','Desc')->value('id');
+        DB::table('order')->where('users_id',null)->update(
             [
                 'users_id'=>Auth::user()->id,
             ]
@@ -24,7 +24,7 @@ class CheckoutController extends Controller
             $cart = Cart::where('users_id',Auth::user()->id)->first();
             DB::table('ordersdetail')->insert(
                 [
-                    'qty' => $cart->qty,
+                    'quantity' => $cart->quantity,
                     'product' => $cart->product,
                     'cost' => $cart->cost,
                     'total' => $cart->total,
@@ -41,12 +41,12 @@ class CheckoutController extends Controller
     {
         $all = 0;
         $data = DB::table('carts')
-            ->where('users_id', Auth::user()->id)
+            ->where('id', Auth::user()->id)
             ->get();
         foreach ($data as $s) {
             $all = $all + $s->total;
         }
-        return view('checkout', ['checkouts' => $data, 'a' => $all]);
+        return view('checkout.checkout', ['checkout' => $data, 'a' => $all]);
 
     }
 

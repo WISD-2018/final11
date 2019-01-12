@@ -19,12 +19,12 @@
         <div class="row">
             <div class="col-md-12 order-md-12 mb-12">
                 <h4 class="d-flex justify-content-between align-items-center mb-3">
-                    <span class="text-muted">您總共買了 {{ $totalCount }} 件商品</span>
+                    <span class="text-muted">您總共買了 {{ $a }} 件商品</span>
                 </h4>
                 <ul class="list-group mb-3">
                     <li class="list-group-item d-flex justify-content-between">
                         <span>帳單總金額：</span>
-                        <strong>$ {{ $totalAmount }}</strong>
+                        <strong>$ {{ $a }}</strong>
                     </li>
                 </ul>
             </div>
