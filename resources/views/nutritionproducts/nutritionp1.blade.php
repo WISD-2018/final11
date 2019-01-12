@@ -41,7 +41,7 @@
                     <a class="nav-link" href="{{ route('register') }}">註冊</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">購物車</a>
+                    <a class="nav-link" href="{{ route('cart.index') }}">購物車</a>
                 </li>
             </ul>
         </div>
@@ -54,7 +54,7 @@
     <div class="row">
 
         <div class="col-lg-3">
-            <h1 class="my-4">狗糧福利社</h1>
+            <h3 class="my-4">狗糧福利社</h3>
             <div class="list-group">
                 <li class="list-group-item active">分類</li>
                 <a href="{{ route('snack') }}" class="list-group-item">零食</a>

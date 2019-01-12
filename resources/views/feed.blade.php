@@ -16,71 +16,88 @@
   <!-- Custom styles for this template -->
   <link href="../css/4-col-portfolio.css" rel="stylesheet">
 
+  <link href="css/shop-item.css" rel="stylesheet">
+
 </head>
 
 <body>
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-
-    <a class="navbar-brand" href="/">狗糧福利社</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive" >
-      <form method="get" action="{{ route('feed') }}" >
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('login') }}">登入</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('register') }}">註冊</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">購物車</a>
-          </li>
-        </ul>
-      </form>
+    <div class="container">
+        <a class="navbar-brand" href="/">狗糧福利社</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">登入</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('register') }}">註冊</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('cart.index') }}">購物車</a>
+                </li>
+            </ul>
+        </div>
     </div>
-
-  </div>
 </nav>
+
+
 
 <!-- Page Content -->
 <div class="container">
-
-  <!-- Page Heading -->
-  <h1 class="my-4">分類>>>
-    <small>飼料</small>
-  </h1>
-  @foreach ($goods as $good2)
     <div class="row">
-      <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="../img/good2/{{$good2->photo}}" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="{{ route('feed.detail',['id'=>$good2->id]) }}">{{$good2->goodname}}</a>
-            </h4>
-            <p class="card-text"><li>{{$good2->gooddetail}}</p>
-          </div>
+        <div class="col-lg-3">
+            <div class="list-group">
+                <li class="list-group-item active">分類</li>
+                <a href="{{ route('snack') }}" class="list-group-item list-group-item-action">零食</a>
+                <a href="{{ route('feed') }}" class="list-group-item list-group-item-action list-group-item-primary">飼料</a>
+                <a href="{{ route('nutrition') }}" class="list-group-item list-group-item-action">營養品</a>
+            </div>
         </div>
-      </div>
+        <!-- /.col-lg-3 -->
+        <div class="col-lg-9">
+            <!-- Page Content -->
+            <div class="container">
+                <div class="row">
+                    <!-- Page Content -->
+                    <div class="container">
+                        @foreach ($goods as $good2)
+                            <div class="row">
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="../img/good2/{{$good2->photo}}" alt="Card image cap">
+                                </div>
+                                <div class="col-md-5">
+                                    <h3><a href="{{ route('feed.detail',['id'=>$good2->id]) }}">{{$good2->goodname}}</a></h3>
+                                    <p class="card-text"><li>{{$good2->gooddetail}}</p>
+                                    <a class="btn btn-primary" href="{{ route('feed.detail',['id'=>$good2->id]) }}">商品詳情</a>
+                                </div>
+                            </div>
+                            <hr>
+                            <!-- /.row -->
+                    @endforeach
+                    <!-- Pagination -->
+                    </div>
+                    <!-- /.container -->
+                </div>
+            </div>
+            <!-- /.card -->
+        </div>
+        <!-- /.col-lg-9 -->
     </div>
 </div>
-<!-- /.row -->
-@endforeach
-<!-- Pagination -->
-
-
-</div>
 <!-- /.container -->
+
+
+
 
 <!-- Footer -->
 <footer class="py-5 bg-dark">

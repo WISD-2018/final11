@@ -69,14 +69,14 @@
           <div class="card mt-4">
             <img class="card-img-top img-fluid" src="https://cdn.shopify.com/s/files/1/0788/5721/articles/bordercollie_1000x_fc20cc02-7ad2-43ea-a302-baf08ab67d3e_1000x.jpg?v=1498036535" alt="">
             <div class="card-body">
-                <h1 class="my-4">熱門商品排行</h1>
+                <h1 class="my-4">好物推薦</h1>
                 <div class="row">
                     <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
                         <div class="card h-100">
                             <a href="#"><img class="card-img-top" src="https://img13.360buyimg.com/n1/jfs/t1/973/23/9607/303561/5bac5ccaE6cd60300/6449aca6a0ff95bd.jpg" alt=""></a>
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    <a href="">天然手作零食-雞肉脆片100g</a>
+                                    <a href="http://localhost:8000/snack/2">天然手作零食-雞肉脆片100g</a>
                                 </h5>
                                 <p class="card-text">
                                 <li>純天然肉品</li>
@@ -95,7 +95,7 @@
                             <a href="#"><img class="card-img-top" src="https://b.ecimg.tw/items/DEBV7G19008BG0Y/000001_1542272313.jpg" alt=""></a>
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    <a href="">乾狗糧-牛肉口味15kg</a>
+                                    <a href="http://localhost:8000/feed/1">乾狗糧-牛肉口味15kg</a>
                                 </h5>
                                 <p class="card-text">
                                 <li>Omega3&6</li>
@@ -111,7 +111,7 @@
                             <a href="#"><img class="card-img-top" src="http://www.books.com.tw/img/N00/066/91/N000669166_t_05.png" alt=""></a>
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    <a href="">愛犬專用綜合維他命+葡萄糖胺</a>
+                                    <a href="http://localhost:8000/nutrition/4">愛犬專用綜合維他命+葡萄糖胺</a>
                                 </h5>
                                 <p class="card-text">
                                 <li>健康皮毛</li>
@@ -127,7 +127,7 @@
                             <a href="#"><img class="card-img-top" src="https://b.ecimg.tw/items/DEAK00A84176109/000001_1545789296.jpg" alt=""></a>
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    <a href="">多效雙刷頭潔牙骨 家庭號桶裝 1400g</a>
+                                    <a href="http://localhost:8000/snack/8">多效雙刷頭潔牙骨 家庭號桶裝 1400g</a>
                                 </h5>
                                 <p class="card-text">
                                 <li>安心配方</li>
