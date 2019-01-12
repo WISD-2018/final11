@@ -51,34 +51,60 @@
   </nav>
 
 
-    <!-- Page Content -->
-    <div class="container">
+  //
+  <!-- Page Content -->
+  <div class="container">
 
-      <!-- Page Heading -->
-      <h1 class="my-4">分類>>>
-        <small>零食</small>
-      </h1>
-      @foreach ($goods as $good)
       <div class="row">
-          <div class="col-md-7">
-              <a href="#">
-                  <img class="img-fluid rounded mb-3 mb-md-0" src="../img/good/{{$good->photo}}" alt="">
-              </a>
+
+          <div class="col-lg-3">
+
+              <div class="list-group">
+                  <li class="list-group-item active">分類</li>
+                  <a href="{{ route('snack') }}" class="list-group-item list-group-item-action list-group-item-primary">零食</a>
+                  <a href="{{ route('feed') }}" class="list-group-item list-group-item-action">飼料</a>
+                  <a href="{{ route('nutrition') }}" class="list-group-item list-group-item-action">營養品</a>
+              </div>
           </div>
-          <div class="col-md-5">
-              <h3><a href="{{ route('snack.detail',['id'=>$good->id]) }}">{{$good->goodname}}</a></h3>
-              <p class="card-text"><li>{{$good->gooddetail}}</p>
-              <a class="btn btn-primary" href="{{ route('snack.detail',['id'=>$good->id]) }}">商品詳情</a>
+          <!-- /.col-lg-3 -->
+
+          <div class="col-lg-9">
+                      <!-- Page Content -->
+                      <div class="container">
+                          <div class="row">
+                              <!-- Page Content -->
+                              <div class="container">
+
+                                  @foreach ($goods as $good)
+                                      <div class="row">
+                                          <div class="card" style="width: 18rem;">
+                                              <img class="card-img-top" src="../img/good/{{$good->photo}}" alt="Card image cap">
+                                          </div>
+                                          <div class="col-md-5">
+                                              <h3><a href="{{ route('snack.detail',['id'=>$good->id]) }}">{{$good->goodname}}</a></h3>
+                                              <p class="card-text"><li>{{$good->gooddetail}}</p>
+                                              <a class="btn btn-primary" href="{{ route('snack.detail',['id'=>$good->id]) }}">商品詳情</a>
+                                          </div>
+                                      </div>
+                                      <hr>
+                                      <!-- /.row -->
+                              @endforeach
+                              <!-- Pagination -->
+                              </div>
+                              <!-- /.container -->
+                      </div>
+                  </div>
+                  <!-- /.card -->
+
+              </div>
+              <!-- /.col-lg-9 -->
+
           </div>
+
       </div>
-            <hr>
-      <!-- /.row -->
-    @endforeach
-      <!-- Pagination -->
+      <!-- /.container -->
+  //
 
-
-    </div>
-    <!-- /.container -->
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
