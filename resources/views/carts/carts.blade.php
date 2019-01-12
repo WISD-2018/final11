@@ -67,7 +67,15 @@
             <!-- /.col-lg-9 -->
 <center>
     <table>
+        <tr>
+            <td align="center">商品</td>
+            <td align="center">單價</td>
+            <td align="center">數量</td>
+            <td align="center"> </td>
+            <td align="center">總計</td>
+        </tr>
         @foreach ($carts as $cart)
+
             <tr >
                 <td width="400" align="center" valign="center">
                     <div class="product-right">
@@ -127,8 +135,10 @@
     </table>
 
 
-    </div>
 
+    <div class="container" align="center">
+
+        <button type="submit" class="btn essence-btn"><a href="http://localhost:8000/checkout" class="btn btn-success">下一步</a></button>
     </div>
     <!-- /.container -->
 

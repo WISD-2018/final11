@@ -22,7 +22,7 @@ class CheckoutController extends Controller
         );
         while ($row = Cart::where('users_id',Auth::user()->id)->first() != null){
             $cart = Cart::where('users_id',Auth::user()->id)->first();
-            DB::table('ordersdetail')->insert(
+            DB::table('orderdetail')->insert(
                 [
                     'quantity' => $cart->quantity,
                     'product' => $cart->product,
@@ -34,6 +34,8 @@ class CheckoutController extends Controller
             );
             Cart::where('users_id',Auth::user()->id)->first()->delete();
         }
+        return view('checkout.checkout');
+
         return redirect()->route('main.user');
     }
 
@@ -41,10 +43,11 @@ class CheckoutController extends Controller
     {
         $all = 0;
         $data = DB::table('carts')
-            ->where('id', Auth::user()->id)
+            ->where('users_id', Auth::user()->id)
             ->get();
-        foreach ($data as $s) {
-            $all = $all + $s->total;
+
+        foreach ($data as $b) {
+            $all = $all + $b->total;
         }
         return view('checkout.checkout', ['checkout' => $data, 'a' => $all]);
 

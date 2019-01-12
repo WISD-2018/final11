@@ -6,6 +6,7 @@ use App\Cart;
 use App\Models\Product;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
@@ -13,6 +14,7 @@ class CartController extends Controller
     {
         $data = DB::table('carts')->get();
         return view('carts.carts',['carts' => $data]);
+
     }
 
     public function add($id)
@@ -26,7 +28,8 @@ class CartController extends Controller
                     'cost' => $price,
                     'good' => $good,
                     'photo' => $photo,
-                    'total' =>$pr
+                    'total' =>$pr,
+                    'users_id'=>Auth::user()->id
                 ]
             );
             return Redirect::to(url()->previous());
@@ -42,7 +45,8 @@ class CartController extends Controller
                 'good' => $good,
                 'cost' => $price,
                 'photo' => $photo,
-                'total' =>$pr
+                'total' =>$pr,
+                'users_id'=>Auth::user()->id
             ]
         );
         return Redirect::to(url()->previous());
@@ -58,7 +62,8 @@ class CartController extends Controller
                 'good' => $good,
                 'cost' => $price,
                 'photo' => $photo,
-                'total' =>$pr
+                'total' =>$pr,
+                'users_id'=>Auth::user()->id
             ]
         );
         return Redirect::to(url()->previous());
@@ -80,5 +85,6 @@ class CartController extends Controller
         Cart::destroy($id);
         return Redirect::to(url()->previous());
     }
+
 }
 
