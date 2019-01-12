@@ -133,8 +133,13 @@
             </tr>
         @endforeach
     </table>
-
-
+    <tr >
+        <td width="400" align="center" valign="center">
+            <div class="product-right">
+                <span>帳單總金額：</span>
+                <strong>$  <?php echo $a; ?></strong>
+            </div>
+        </td>
 
     <div class="container" align="center">
 

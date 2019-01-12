@@ -12,10 +12,24 @@ class CartController extends Controller
 {
     public function index()
     {
-        $data = DB::table('carts')->get();
-        return view('carts.carts',['carts' => $data]);
+
+        if (Auth::check()) {
+            $all = 0;
+            $data = DB::table('carts')
+                ->where('users_id',Auth::user()->id)
+                ->get();
+            foreach ($data as $s){
+                $all = $all + $s->total;
+            }
+
+            return view('carts.carts',['carts' => $data,'a' =>$all]);
+        }else{
+            return redirect()->route('login');
+        }
+
 
     }
+
 
     public function add($id)
     {
@@ -85,6 +99,7 @@ class CartController extends Controller
         Cart::destroy($id);
         return Redirect::to(url()->previous());
     }
+
 
 }
 
