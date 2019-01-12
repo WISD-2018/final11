@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class BackController extends Controller
 {
     public function back()
 {
-    return view('back.backindex');
+    $data = DB::table('good')->get();;
+    return view('back.backindex', ['goods' => $data]);
 }
     public function backlogin()
     {

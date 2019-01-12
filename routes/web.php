@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/back', function () {
-    return view('back.backindex');
-});
+Route::get('/back', 'BackController@back')->name('back');
 
 Auth::routes();
 
@@ -61,6 +59,7 @@ Route::get('/forgotpassword', 'BackController@forgotpassword')->name('forgotpass
 Route::get('/tables', 'BackController@tables')->name('tables');
 
 Route::get('/cart', 'CartController@index')->name('cart.index');
+
 
 //購物車新增
 Route::get('/cart/{id}', 'CartController@add', function ($id) {

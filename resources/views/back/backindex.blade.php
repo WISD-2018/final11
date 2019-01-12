@@ -187,7 +187,7 @@
                       <th>有效日期</th>
                     </tr>
                   </thead>
-                  @foreach ($goods as $good2)
+                  @foreach ($goods as $good)
                   <tbody>
                     <tr>
                       <td>{{$good->id}}</td>
@@ -197,8 +197,8 @@
                       <td>50</td>
                       <td>{{$good->expirydate}}</td>
                     </tr>
-
                   </tbody>
+                  @endforeach
                 </table>
               </div>
             </div>
