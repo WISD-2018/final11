@@ -26,6 +26,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         <a class="navbar-brand" href="/">狗糧福利社</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,6 +54,8 @@
         </div>
 
 =======
+=======
+>>>>>>> 0ff1bcc3cd27a48a44b1b4bf272d3a8bcdcc02a3
           <a class="navbar-brand" href="/">狗糧福利社</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -75,6 +78,9 @@
                   </li>
               </ul>
           </div>
+<<<<<<< HEAD
+>>>>>>> 0ff1bcc3cd27a48a44b1b4bf272d3a8bcdcc02a3
+=======
 >>>>>>> 0ff1bcc3cd27a48a44b1b4bf272d3a8bcdcc02a3
       </div>
   </nav>
