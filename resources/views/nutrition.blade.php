@@ -3,20 +3,20 @@
 
 <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <title>狗糧福利社-營養品</title>
+    <title>狗糧福利社</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-  <link href="../css/4-col-portfolio.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../css/4-col-portfolio.css" rel="stylesheet">
 
-   <link href="css/shop-item.css" rel="stylesheet">
+    <link href="css/shop-item.css" rel="stylesheet">
 
 </head>
 
@@ -36,9 +36,20 @@
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">登入</a>
-                </li>
+                @if(\Illuminate\Support\Facades\Auth::check())
+                    <a class="nav-link" href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                       document.getElementById('logout-form').submit();">
+                        {{ __('登出') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">登入</a>
+                    </li>
+                @endif
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('register') }}">註冊</a>
                 </li>

@@ -1,4 +1,5 @@
 @extends('layouts.master')
+<!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="/">狗糧福利社</a>
@@ -12,14 +13,25 @@
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">登入</a>
-                </li>
+                @if(\Illuminate\Support\Facades\Auth::check())
+                    <a class="nav-link" href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                       document.getElementById('logout-form').submit();">
+                        {{ __('登出') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">登入</a>
+                    </li>
+                @endif
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('register') }}">註冊</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">購物車</a>
+                    <a class="nav-link" href="{{ route('cart.index') }}">購物車</a>
                 </li>
             </ul>
         </div>

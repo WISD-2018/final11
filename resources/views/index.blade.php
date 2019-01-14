@@ -35,7 +35,7 @@
               </a>
             </li>
               @if(\Illuminate\Support\Facades\Auth::check())
-                  <a class="nav-item" href="{{ route('logout') }}"
+                  <a class="nav-link" href="{{ route('logout') }}"
                      onclick="event.preventDefault();
                        document.getElementById('logout-form').submit();">
                       {{ __('登出') }}
