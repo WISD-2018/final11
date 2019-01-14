@@ -33,6 +33,7 @@ class CartController extends Controller
 
     public function add($id)
     {
+        if (Auth::check()) {
             $good = DB::table('good')->where('id', $id)->value('goodname');
             $price = DB::table('good')->where('id', $id)->value('price');
         $pr = DB::table('good')->where('id', $id)->value('price');
@@ -47,9 +48,14 @@ class CartController extends Controller
                 ]
             );
             return Redirect::to(url()->previous());
-    }
+        }else{
+                return redirect()->route('login');
+            }}
+
+
     public function add2($id)
     {
+        if (Auth::check()) {
         $good = DB::table('good2')->where('id', $id)->value('goodname');
         $price = DB::table('good2')->where('id', $id)->value('price');
         $pr = DB::table('good2')->where('id', $id)->value('price');
@@ -64,9 +70,12 @@ class CartController extends Controller
             ]
         );
         return Redirect::to(url()->previous());
-    }
+    }else{
+return redirect()->route('login');
+}}
     public function add3($id)
     {
+        if (Auth::check()) {
         $good = DB::table('good3')->where('id', $id)->value('goodname');
         $price = DB::table('good3')->where('id', $id)->value('price');
         $pr = DB::table('good3')->where('id', $id)->value('price');
@@ -81,9 +90,12 @@ class CartController extends Controller
             ]
         );
         return Redirect::to(url()->previous());
-    }
+    }else{
+    return redirect()->route('login');
+}}
     public function update($id,$quantity)
     {
+        if (Auth::check()) {
         $c= DB::table('carts')->where('id', $id)->value('cost');
         DB::table('carts')
             ->where('id', $id)
@@ -92,14 +104,15 @@ class CartController extends Controller
                 'total' => $c * $quantity
             ]);
         return Redirect::to(url()->previous());
-    }
+    }else{
+            return redirect()->route('login');
+        }}
 
     public function delete($id)
-    {
+    {if (Auth::check()) {
         Cart::destroy($id);
         return Redirect::to(url()->previous());
-    }
-
-
-}
+    } else{
+return redirect()->route('login');
+}}}
 

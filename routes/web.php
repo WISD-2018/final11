@@ -81,3 +81,5 @@ Route::delete('cart/delete/{id}','CartController@delete',function($id){
 
 //結帳
 Route::get('checkout','CheckoutController@cartdetail');
+
+
