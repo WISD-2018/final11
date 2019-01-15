@@ -25,19 +25,15 @@ class CheckoutController extends Controller
             DB::table('orderdetail')->insert(
                 [
                     'quantity' => $cart->quantity,
-                    'product' => $cart->product,
-                    'cost' => $cart->cost,
-                    'total' => $cart->total,
-                    'users_id' => Auth::user()->id,
-                    'orders_id' => $count
+                    'product' => $cart->good,
+                    'price' => $cart->cost,
+                    'order_id' => $count
                 ]
             );
             Cart::where('users_id',Auth::user()->id)->first()->delete();
         }
-        return view('checkout.checkout');
-
-        return redirect()->route('main.user');
-    }
+        return redirect()->route('index');
+}
 
     public function cartdetail()
     {

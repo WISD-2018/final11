@@ -18,5 +18,11 @@ class order extends Model
     {
         return $this->hasMany('app\Cart');
     }
+
+    protected  $fillable=[
+        'username', 'userphone',  'useraddress', 'created_at', 'updated_at',
+    ];
+
+
 }
 

@@ -13,7 +13,8 @@
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');;
+
 
 Route::get('/back', 'BackController@back')->name('back');
 
@@ -82,4 +83,5 @@ Route::delete('cart/delete/{id}','CartController@delete',function($id){
 //結帳
 Route::get('checkout','CheckoutController@cartdetail');
 
-
+Route::post('/orders',['as'=> 'orders.store','uses'=>'CheckoutController@store',function(Request $request){
+}]);
