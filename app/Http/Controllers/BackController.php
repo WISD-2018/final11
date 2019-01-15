@@ -23,16 +23,5 @@ class BackController extends Controller
     {
         return view('back.order');
     }
-    public function delete($id){
-        good::destroy($id);
-        return Redirect::to(url()->previous());
-    }
-    public function delete2($id){
-        good2::destroy($id);
-        return Redirect::to(url()->previous());
-    }
-    public function delete3($id){
-        good3::destroy($id);
-        return Redirect::to(url()->previous());
-    }
+
 }

@@ -191,7 +191,6 @@
                 <th>數量</th>
                 <th>安全庫存</th>
                 <th>有效日期</th>
-                <th></th>
               </tr>
               </thead>
 
@@ -204,11 +203,6 @@
                   <td>{{$good->quantity}}</td>
                   <td>50</td>
                   <td>{{$good->expirydate}}</td>
-                  <td><form action="{{ route('back.delete', $good->id) }}" method="POST">
-                      {{ csrf_field() }}
-                      {{ method_field('DELETE') }}
-                      <button class="btn btn-link"><img src="{{asset('/img/core-img/close.png')}}"></button>
-                    </form></td>
                 </tr>
                 </tbody>
               @endforeach
@@ -221,11 +215,6 @@
                   <td>{{$good->quantity}}</td>
                   <td>50</td>
                   <td>{{$good->expirydate}}</td>
-                  <td><form action="{{ route('back.delete2', $good2->id) }}" method="POST">
-                      {{ csrf_field() }}
-                      {{ method_field('DELETE') }}
-                      <button class="btn btn-link"><img src="{{asset('/img/core-img/close.png')}}"></button>
-                    </form></td>
                 </tr>
                 </tbody>
               @endforeach
@@ -238,11 +227,6 @@
                   <td>{{$good->quantity}}</td>
                   <td>50</td>
                   <td>{{$good->expirydate}}</td>
-                  <td><form action="{{ route('back.delete3', $good3->id) }}" method="POST">
-                      {{ csrf_field() }}
-                      {{ method_field('DELETE') }}
-                      <button class="btn btn-link"><img src="{{asset('/img/core-img/close.png')}}"></button>
-                    </form></td>
                 </tr>
                 </tbody>
               @endforeach
