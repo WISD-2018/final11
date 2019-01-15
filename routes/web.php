@@ -16,7 +16,7 @@ Route::get('/', function () {
 })->name('index');;
 
 
-Route::get('/back', 'BackController@back')->name('back');
+
 
 Auth::routes();
 
@@ -44,6 +44,8 @@ Route::get('/nutrition/{id}', 'NutritionController@nutritiondetail', function ($
 
 //後台管理
 Route::get('/back', 'BackController@back')->name('back');
+Route::get('/member', 'MemberController@member')->name('member');
+Route::get('/order', 'OrderController@order')->name('order');
 
 Route::get('/error', 'BackController@error')->name('error');
 
@@ -52,9 +54,6 @@ Route::get('/backlogin', 'BackController@backlogin')->name('backlogin');
 Route::get('/backregister', 'BackController@backregister')->name('backregister');
 
 Route::get('/blank', 'BackController@blank')->name('blank');
-
-Route::get('/charts', 'BackController@charts')->name('charts');
-
 Route::get('/forgotpassword', 'BackController@forgotpassword')->name('forgotpassword');
 
 Route::get('/tables', 'BackController@tables')->name('tables');
