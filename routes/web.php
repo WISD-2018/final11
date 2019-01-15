@@ -44,12 +44,9 @@ Route::get('/nutrition/{id}', 'NutritionController@nutritiondetail', function ($
 
 //後台管理
 Route::get('/back', 'BackController@back')->name('back');
-Route::delete('back/delete/{id}','BackController@delete',function($id){
-})->name('back.delete');
-Route::delete('back/delete/{id}','BackController@delete2',function($id){
-})->name('back.delete2');
-Route::delete('back/delete/{id}','BackController@delete3',function($id){
-})->name('back.delete3');
+Route::delete('employee/delete/{id}','EmployeeController@delete',function($id){
+})->name('employee.delete');
+
 Route::get('/member', 'MemberController@member')->name('member');
 Route::get('/employee', 'EmployeeController@employee')->name('employee');
 Route::get('/order', 'OrderController@order')->name('order');

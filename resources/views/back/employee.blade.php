@@ -142,6 +142,7 @@
                 <th>員工電話</th>
                 <th>住家地址</th>
                 <th>雇用日期</th>
+                <th></th>
               </tr>
               </thead>
               @foreach ($employees as $employee)
@@ -153,6 +154,11 @@
                   <td>{{$employee->cellphone}}</td>
                   <td>{{$employee->employeeaddress}}</td>
                   <td>{{$employee->employmentdate}}</td>
+                  <td><form action="{{ route('employee.delete', $employee->id) }}" method="POST">
+                      {{ csrf_field() }}
+                      {{ method_field('DELETE') }}
+                      <button class="btn btn-link"><img src="{{asset('/img/core-img/close.png')}}"></button>
+                    </form></td>
                 </tr>
                 </tbody>
               @endforeach

@@ -24,4 +24,8 @@ class EmployeeController extends Controller
     {
         return view('back.order');
     }
+    public function delete($id){
+        employee::destroy($id);
+        return Redirect::to(url()->previous());
+    }
 }
