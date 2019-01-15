@@ -15,8 +15,12 @@ class BackController extends Controller
     return view('back.backindex', ['goods' => $data]+['good2'=>$data2]+['good3'=>$data3]);
 }
     
-    public function charts()
+    public function member()
     {
-        return view('back.charts');
+        return view('back.member');
+    }
+    public function order()
+    {
+        return view('back.order');
     }
 }
