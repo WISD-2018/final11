@@ -25,4 +25,6 @@ class OrderController extends Controller
     {
         return view('back.employee');
     }
+
 }
+

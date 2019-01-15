@@ -154,7 +154,8 @@
                   <td>{{$employee->cellphone}}</td>
                   <td>{{$employee->employeeaddress}}</td>
                   <td>{{$employee->employmentdate}}</td>
-                  <td><form action="{{ route('employee.delete', $employee->id) }}" method="POST">
+                  <td>
+                    <form action="{{ route('employee.delete', $employee->id) }}" method="POST">
                       {{ csrf_field() }}
                       {{ method_field('DELETE') }}
                       <button class="btn btn-link"><img src="{{asset('/img/core-img/close.png')}}"></button>

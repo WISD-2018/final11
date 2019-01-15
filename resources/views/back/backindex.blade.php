@@ -135,7 +135,7 @@
               <div class="card-body-icon">
                 <i class="fas fa-fw fa-comments"></i>
               </div>
-              <div class="mr-5">位會員</div>
+              <div class="mr-5">會員</div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="{{ route('member') }}">
               <span class="float-left">View Details</span>
@@ -151,7 +151,7 @@
               <div class="card-body-icon">
                 <i class="fas fa-fw fa-shopping-cart"></i>
               </div>
-              <div class="mr-5">123 New Orders!</div>
+              <div class="mr-5">訂單</div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="{{ route('order') }}">
               <span class="float-left">View Details</span>

@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\employee;
+use Illuminate\Http\Request;
 
 Route::get('/', function () {
     return view('index');
@@ -43,12 +45,19 @@ Route::get('/nutrition/{id}', 'NutritionController@nutritiondetail', function ($
 
 
 //後台管理
+
 Route::get('/back', 'BackController@back')->name('back');
+Route::get('/employee', 'EmployeeController@employee')->name('employee');
+Route::get('/employee/{id}/edit', 'EmployeeController@edit',function($id){
+})->name('employee.edit');
+Route::post('employee', 'EmployeeController@store')->name('employee.store');
+Route::patch('/employee/{id}', 'EmployeeController@update',function($id){
+})->name('employee.update');
 Route::delete('employee/delete/{id}','EmployeeController@delete',function($id){
 })->name('employee.delete');
 
 Route::get('/member', 'MemberController@member')->name('member');
-Route::get('/employee', 'EmployeeController@employee')->name('employee');
+
 Route::get('/order', 'OrderController@order')->name('order');
 
 Route::get('/error', 'BackController@error')->name('error');
