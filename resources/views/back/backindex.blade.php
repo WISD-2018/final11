@@ -199,6 +199,30 @@
                     </tr>
                   </tbody>
                   @endforeach
+                  @foreach ($good2 as $good)
+                    <tbody>
+                    <tr>
+                      <td>{{$good->id}}</td>
+                      <td>{{$good->goodname}}</td>
+                      <td>{{$good->price}}</td>
+                      <td>{{$good->quantity}}</td>
+                      <td>50</td>
+                      <td>{{$good->expirydate}}</td>
+                    </tr>
+                    </tbody>
+                  @endforeach
+                  @foreach ($good3 as $good)
+                    <tbody>
+                    <tr>
+                      <td>{{$good->id}}</td>
+                      <td>{{$good->goodname}}</td>
+                      <td>{{$good->price}}</td>
+                      <td>{{$good->quantity}}</td>
+                      <td>50</td>
+                      <td>{{$good->expirydate}}</td>
+                    </tr>
+                    </tbody>
+                  @endforeach
                 </table>
               </div>
             </div>
