@@ -21,4 +21,8 @@ class OrderController extends Controller
     {
         return view('back.backindex');
     }
+    public function employee()
+    {
+        return view('back.employee');
+    }
 }

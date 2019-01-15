@@ -23,5 +23,8 @@ class BackController extends Controller
     {
         return view('back.order');
     }
-
+    public function employee()
+    {
+        return view('back.employee');
+    }
 }
