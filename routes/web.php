@@ -45,6 +45,7 @@ Route::get('/nutrition/{id}', 'NutritionController@nutritiondetail', function ($
 //後台管理
 Route::get('/back', 'BackController@back')->name('back');
 Route::get('/member', 'MemberController@member')->name('member');
+Route::get('/employee', 'EmployeeController@employee')->name('employee');
 Route::get('/order', 'OrderController@order')->name('order');
 
 Route::get('/error', 'BackController@error')->name('error');

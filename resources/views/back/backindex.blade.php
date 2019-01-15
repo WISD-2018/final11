@@ -104,6 +104,11 @@
         <span>會員</span></a>
     </li>
     <li class="nav-item">
+      <a class="nav-link" href="{{ route('employee') }}">
+        <i class="fas fa-fw fa-chart-area"></i>
+        <span>員工</span></a>
+    </li>
+    <li class="nav-item">
       <a class="nav-link" href="{{ route('order') }}">
         <i class="fas fa-fw fa-chart-area"></i>
         <span>訂單</span></a>
@@ -132,7 +137,7 @@
               </div>
               <div class="mr-5">26 New Messages!</div>
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
+            <a class="card-footer text-white clearfix small z-1" href="{{ route('member') }}">
               <span class="float-left">View Details</span>
               <span class="float-right">
                     <i class="fas fa-angle-right"></i>
@@ -148,7 +153,7 @@
               </div>
               <div class="mr-5">123 New Orders!</div>
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
+            <a class="card-footer text-white clearfix small z-1" href="{{ route('order') }}">
               <span class="float-left">View Details</span>
               <span class="float-right">
                     <i class="fas fa-angle-right"></i>

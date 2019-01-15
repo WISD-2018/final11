@@ -104,6 +104,11 @@
         <span>會員</span></a>
     </li>
     <li class="nav-item">
+      <a class="nav-link" href="{{ route('employee') }}">
+        <i class="fas fa-fw fa-chart-area"></i>
+        <span>員工</span></a>
+    </li>
+    <li class="nav-item">
       <a class="nav-link" href="{{ route('order') }}">
         <i class="fas fa-fw fa-chart-area"></i>
         <span>訂單</span></a>
