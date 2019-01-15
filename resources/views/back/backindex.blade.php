@@ -135,7 +135,7 @@
               <div class="card-body-icon">
                 <i class="fas fa-fw fa-comments"></i>
               </div>
-              <div class="mr-5">26 New Messages!</div>
+              <div class="mr-5">位會員</div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="{{ route('member') }}">
               <span class="float-left">View Details</span>
@@ -181,6 +181,7 @@
           產品</div>
         <div class="card-body">
           <div class="table-responsive">
+
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
               <tr>
@@ -190,8 +191,10 @@
                 <th>數量</th>
                 <th>安全庫存</th>
                 <th>有效日期</th>
+                <th></th>
               </tr>
               </thead>
+
               @foreach ($goods as $good)
                 <tbody>
                 <tr>
@@ -201,6 +204,11 @@
                   <td>{{$good->quantity}}</td>
                   <td>50</td>
                   <td>{{$good->expirydate}}</td>
+                  <td><form action="{{ route('back.delete', $good->id) }}" method="POST">
+                      {{ csrf_field() }}
+                      {{ method_field('DELETE') }}
+                      <button class="btn btn-link"><img src="{{asset('/img/core-img/close.png')}}"></button>
+                    </form></td>
                 </tr>
                 </tbody>
               @endforeach
@@ -213,6 +221,11 @@
                   <td>{{$good->quantity}}</td>
                   <td>50</td>
                   <td>{{$good->expirydate}}</td>
+                  <td><form action="{{ route('back.delete2', $good2->id) }}" method="POST">
+                      {{ csrf_field() }}
+                      {{ method_field('DELETE') }}
+                      <button class="btn btn-link"><img src="{{asset('/img/core-img/close.png')}}"></button>
+                    </form></td>
                 </tr>
                 </tbody>
               @endforeach
@@ -225,6 +238,11 @@
                   <td>{{$good->quantity}}</td>
                   <td>50</td>
                   <td>{{$good->expirydate}}</td>
+                  <td><form action="{{ route('back.delete3', $good3->id) }}" method="POST">
+                      {{ csrf_field() }}
+                      {{ method_field('DELETE') }}
+                      <button class="btn btn-link"><img src="{{asset('/img/core-img/close.png')}}"></button>
+                    </form></td>
                 </tr>
                 </tbody>
               @endforeach
