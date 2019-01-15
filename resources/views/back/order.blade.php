@@ -29,7 +29,7 @@
 
 <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-  <a class="navbar-brand mr-1" href="backindex.blade.php">狗糧福利社後台</a>
+  <a class="navbar-brand mr-1" href="{{ route('back') }}">狗糧福利社後台</a>
 
   <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
     <i class="fas fa-bars"></i>
@@ -119,44 +119,9 @@
         <li class="breadcrumb-item">
           <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Overview</li>
+        <li class="breadcrumb-item active">訂單</li>
       </ol>
 
-      <!-- Icon Cards-->
-      <div class="row">
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fas fa-fw fa-comments"></i>
-              </div>
-              <div class="mr-5">26 New Messages!</div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">View Details</span>
-              <span class="float-right">
-                    <i class="fas fa-angle-right"></i>
-                  </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-success o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fas fa-fw fa-shopping-cart"></i>
-              </div>
-              <div class="mr-5">123 New Orders!</div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">View Details</span>
-              <span class="float-right">
-                    <i class="fas fa-angle-right"></i>
-                  </span>
-            </a>
-          </div>
-        </div>
-      </div>
      <!-- DataTables Example -->
       <div class="card mb-3">
         <div class="card-header">
