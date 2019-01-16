@@ -140,6 +140,7 @@
                 <th>會員姓名</th>
                 <th>信箱</th>
                 <th>成立日期</th>
+                <th></th>
               </tr>
               </thead>
               @foreach ($users as $member)
@@ -149,6 +150,12 @@
                   <td>{{$member->name}}</td>
                   <td>{{$member->email}}</td>
                   <td>{{$member->created_at}}</td>
+                  <td>
+                  <form action="{{ route('member.delete', $member->id) }}" method="POST">
+                    {{ csrf_field() }}
+                    {{ method_field('DELETE') }}
+                    <button class="btn btn-link"><img src="{{asset('/img/core-img/close.png')}}"></button>
+                  </form></td>
                 </tr>
                 </tbody>
               @endforeach

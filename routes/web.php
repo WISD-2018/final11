@@ -57,7 +57,8 @@ Route::delete('employee/delete/{id}','EmployeeController@delete',function($id){
 })->name('employee.delete');
 
 Route::get('/member', 'MemberController@member')->name('member');
-
+Route::delete('member/delete/{id}','MemberController@delete',function($id){
+})->name('member.delete');
 Route::get('/order', 'OrderController@order')->name('order');
 
 Route::get('/error', 'BackController@error')->name('error');

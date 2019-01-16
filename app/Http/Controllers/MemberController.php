@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Member;
 use Illuminate\Http\Request;
 use DB;
+
 
 class MemberController extends Controller
 {
@@ -23,5 +25,9 @@ class MemberController extends Controller
     public function employee()
     {
         return view('back.employee');
+    }
+    public function delete($id){
+        Member::destroy($id);
+        return redirect()->route('back.member');
     }
 }
