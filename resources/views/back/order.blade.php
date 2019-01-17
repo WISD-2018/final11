@@ -124,97 +124,36 @@
         <li class="breadcrumb-item">
           <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Overview</li>
+        <li class="breadcrumb-item active">訂單</li>
       </ol>
 
-      <!-- Icon Cards-->
-      <div class="row">
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fas fa-fw fa-comments"></i>
-              </div>
-              <div class="mr-5">會員</div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="{{ route('member') }}">
-              <span class="float-left">View Details</span>
-              <span class="float-right">
-                    <i class="fas fa-angle-right"></i>
-                  </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-success o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fas fa-fw fa-shopping-cart"></i>
-              </div>
-              <div class="mr-5">訂單</div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="{{ route('order') }}">
-              <span class="float-left">View Details</span>
-              <span class="float-right">
-                    <i class="fas fa-angle-right"></i>
-                  </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- DataTables Example -->
+     <!-- DataTables Example -->
       <div class="card mb-3">
         <div class="card-header">
           <i class="fas fa-table"></i>
-          產品</div>
+          訂單</div>
         <div class="card-body">
           <div class="table-responsive">
-
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
               <tr>
-                <th>產品編號</th>
-                <th>產品名稱</th>
-                <th>價錢</th>
-                <th>數量</th>
-                <th>安全庫存</th>
-                <th>有效日期</th>
+                <th>訂單編號</th>
+                <th>顧客編號</th>
+                <th>顧客姓名</th>
+                <th>顧客電話</th>
+                <th>住家地址</th>
+                <th>下單日期</th>
               </tr>
               </thead>
-
-              @foreach ($goods as $good)
+              @foreach ($orders as $order)
                 <tbody>
                 <tr>
-                  <td>{{$good->id}}</td>
-                  <td>{{$good->goodname}}</td>
-                  <td>{{$good->price}}</td>
-                  <td>{{$good->quantity}}</td>
-                  <td>50</td>
-                  <td>{{$good->expirydate}}</td>
-                </tr>
-                </tbody>
-              @endforeach
-              @foreach ($good2 as $good)
-                <tbody>
-                <tr>
-                  <td>{{$good->id}}</td>
-                  <td>{{$good->goodname}}</td>
-                  <td>{{$good->price}}</td>
-                  <td>{{$good->quantity}}</td>
-                  <td>50</td>
-                  <td>{{$good->expirydate}}</td>
-                </tr>
-                </tbody>
-              @endforeach
-              @foreach ($good3 as $good)
-                <tbody>
-                <tr>
-                  <td>{{$good->id}}</td>
-                  <td>{{$good->goodname}}</td>
-                  <td>{{$good->price}}</td>
-                  <td>{{$good->quantity}}</td>
-                  <td>50</td>
-                  <td>{{$good->expirydate}}</td>
+                  <td>{{$order->id}}</td>
+                  <td>{{$order->users_id}}</td>
+                  <td>{{$order->username}}</td>
+                  <td>{{$order->userphone}}</td>
+                  <td>{{$order->useraddress}}</td>
+                  <td>{{$order->created_at}}</td>
                 </tr>
                 </tbody>
               @endforeach

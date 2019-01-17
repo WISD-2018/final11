@@ -33,7 +33,10 @@ class CheckoutController extends Controller
             );
             Cart::where('users_id',Auth::user()->id)->first()->delete();
         }
-        return redirect()->route('index');
+
+        return redirect('/')->with('message', '訂單已送出');
+
+
 }
 
     public function cartdetail()

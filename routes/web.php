@@ -10,13 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\employee;
+use Illuminate\Http\Request;
 
 Route::get('/', function () {
     return view('index');
 })->name('index');;
 
 
-Route::get('/back', 'BackController@back')->name('back');
+
 
 Auth::routes();
 
@@ -43,7 +45,21 @@ Route::get('/nutrition/{id}', 'NutritionController@nutritiondetail', function ($
 
 
 //後台管理
+
 Route::get('/back', 'BackController@back')->name('back');
+Route::get('/employee', 'EmployeeController@employee')->name('employee');
+Route::get('/employee/{id}/edit', 'EmployeeController@edit',function($id){
+})->name('employee.edit');
+Route::post('employee', 'EmployeeController@store')->name('employee.store');
+Route::patch('/employee/{id}', 'EmployeeController@update',function($id){
+})->name('employee.update');
+Route::delete('employee/delete/{id}','EmployeeController@delete',function($id){
+})->name('employee.delete');
+
+Route::get('/member', 'MemberController@member')->name('member');
+Route::delete('member/delete/{id}','MemberController@delete',function($id){
+})->name('member.delete');
+Route::get('/order', 'OrderController@order')->name('order');
 
 Route::get('/error', 'BackController@error')->name('error');
 
@@ -52,9 +68,6 @@ Route::get('/backlogin', 'BackController@backlogin')->name('backlogin');
 Route::get('/backregister', 'BackController@backregister')->name('backregister');
 
 Route::get('/blank', 'BackController@blank')->name('blank');
-
-Route::get('/charts', 'BackController@charts')->name('charts');
-
 Route::get('/forgotpassword', 'BackController@forgotpassword')->name('forgotpassword');
 
 Route::get('/tables', 'BackController@tables')->name('tables');

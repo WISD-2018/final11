@@ -11,6 +11,7 @@ class FeedController extends Controller
     public function feed()
     {
         $data = DB::table('good2')->get();;
+
         return view('feed', ['goods' => $data]);
     }
     public function feeddetail($id)
