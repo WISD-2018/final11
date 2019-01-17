@@ -27,7 +27,8 @@ class CheckoutController extends Controller
                     'quantity' => $cart->quantity,
                     'product' => $cart->good,
                     'price' => $cart->cost,
-                    'order_id' => $count
+                    'order_id' => $count,
+                    'users_id' => $cart ->users_id
                 ]
             );
             Cart::where('users_id',Auth::user()->id)->first()->delete();

@@ -85,3 +85,6 @@ Route::get('checkout','CheckoutController@cartdetail');
 
 Route::post('/orders',['as'=> 'orders.store','uses'=>'CheckoutController@store',function(Request $request){
 }]);
+
+Route::get('/user', 'OrderController@index')->name('user');
+
