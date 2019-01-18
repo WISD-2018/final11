@@ -33,6 +33,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('cart.index') }}">購物車</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('user') }}">購物紀錄</a>
+                </li>
             </ul>
         </div>
     </div>

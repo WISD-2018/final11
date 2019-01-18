@@ -17,33 +17,22 @@
     <link href="css/shop-item.css" rel="stylesheet">
 
 </head>
-
-<div class="container">
-
-
-    <div class="row justify-content-center">
-
-        <div class="col-md-8">
-            <div class="clearfix mr-50 mt-50 mb-50">
-            </div>
-
-            <div class="card">
-                <div class="card-header"style="text-align:center">{{ __('個人資料') }}</div>
-
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                    會員名稱： <span class="caret"></span><br>
-                    電子信箱： <span class="caret"></span><br>
-                </div>
-
-
-                <div class="card-body" aria-labelledby="navbarDropdown">
-                    <a class="card-body" href="{{ route('logout') }}"
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="/">狗糧福利社</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                @if(\Illuminate\Support\Facades\Auth::check())
+                    <a class="nav-link" href="{{ route('logout') }}"
                        onclick="event.preventDefault();
                        document.getElementById('logout-form').submit();">
                         {{ __('登出') }}
@@ -51,14 +40,24 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>
-
-                </div>
-            </div>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">登入</a>
+                    </li>
+                @endif
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('register') }}">註冊</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('cart.index') }}">購物車</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('user') }}">購物紀錄</a>
+                </li>
+            </ul>
         </div>
     </div>
-</div>
-
-
+</nav>
 <div class="container">
 
 
@@ -86,34 +85,43 @@
                                 <div class="single-product-wrapper text-align:center">
                                     <div style="float:left  ; " width="50%">
                                         購買時間：{{$orders->created_at}}
-                                        <table class="table" border="0">
-                                            <tr bgcolor="#eeeeee">
-                                                　<td width="94" align="center" >收件人姓名</td>
-                                                　<td width="70" align="center">手機號碼</td>
-                                                　<td width="200" align="center">地址</td>
-                                            </tr>
+                                        <table class="table">
+                                            <thead class="thead-dark">
                                             <tr>
-                                                　<td width="94" align="center">{{$orders->username}}</td>
-                                                　<td width="70" align="center">{{$orders->userphone}}</td>
-                                                　<td width="200" align="center">{{$orders->useraddress}}</td>
+                                                <th scope="col">收件人姓名</th>
+                                                <th scope="col">手機號碼</th>
+                                                <th scope="col">地址</th>
                                             </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>{{$orders->username}}</td>
+                                                <td>{{$orders->userphone}}</td>
+                                                <td>{{$orders->useraddress}}</td>
+                                            </tr>
+                                            </tbody>
                                         </table>
                                     </div>
                                     <div style="float:right" width="50%">
-                                        <table class="table mt-21" border="0">
-                                            <tr bgcolor="#f5f5f5">
-                                                <td width="66" align="center">商品</td>
-                                                <td width="52" align="center">單價</td>
-                                                <td width="52" align="center">數量</td>
+                                        <br />
+                                        <table class="table">
+                                            <thead class="thead-dark">
+                                            <tr>
+                                                <th scope="col">商品</th>
+                                                <th scope="col">單價</th>
+                                                <th scope="col">數量</th>
                                             </tr>
+                                            </thead>
                                             @foreach ($orderdetail as $ordersdetail)
                                                 @if($ordersdetail->order_id == $orders->id)
-
+                                                    <tbody>
                                                     <tr>
-                                                        <td width="66" align="center">{{$ordersdetail->product}}</td>
-                                                        <td width="52" align="center">{{$ordersdetail->price}}</td>
-                                                        <td width="52" align="center">{{$ordersdetail->quantity}}</td>
+                                                        <td>{{$ordersdetail->product}}</td>
+                                                        <td>{{$ordersdetail->price}}</td>
+                                                        <td>{{$ordersdetail->quantity}}</td>
                                                     </tr>
+                                                    </tbody>
+                                        </table>
                                                 @endif
                                             @endforeach
                                         </table>
