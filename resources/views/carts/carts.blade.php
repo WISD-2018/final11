@@ -138,7 +138,7 @@
                         <form action="{{ route('cart.delete', $cart->id) }}" method="POST">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
-                            <button class="btn btn-link"><img src="{{asset('/img/core-img/close.png')}}"></button>
+                            <button class="btn btn-link"><img src="http://www.shejiye.com/uploadfile/icon/2017/0203/shejiyeiconsvybjzsohuj.png" width="25" height="25"></button>
                         </form>
                     </div>
                 </td>
