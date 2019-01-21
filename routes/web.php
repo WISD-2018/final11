@@ -45,6 +45,34 @@ Route::get('/nutrition/{id}', 'NutritionController@nutritiondetail', function ($
 
 
 //後台管理
+Route::get('/admin', ['as' => 'admin.index', 'uses' => 'AdminController@index']);
+Route::get('/BackstageUser', ['as' => 'admin.user.backstage_user' , 'uses' => 'AdminBackstageController@index']);
+//修改使用者
+Route::get('/BackstageUser/edit/{id}', ['as' => 'admin.user.backstage_useredit'   , 'uses' => 'AdminBackstageController@edit']);
+Route::patch('/BackstageUser/update/{id}', ['as' => 'admin.user.backstage_userupdate' , 'uses' => 'AdminBackstageController@update']);
+//刪除使用者
+Route::delete('/BackstageUser/delete/{id}'  , ['as' => 'admin.user.backstage_userdelete', 'uses' => 'AdminBackstageController@destroy']);
+
+
+//訂單管理
+Route::get('/BackstageOrder', ['as' => 'admin.order.backstage_order' , 'uses' => 'AdminBackstageController@orderindex']);
+//修改訂單
+Route::get('/BackstageOrder/edit/{id}', ['as' => 'admin.order.backstage_orderedit'   , 'uses' => 'AdminBackstageController@orderedit']);
+Route::patch('/BackstageOrder/update/{id}', ['as' => 'admin.order.backstage_orderupdate', 'uses' => 'AdminBackstageController@orderupdate']);
+//刪除訂單
+Route::delete('/BackstageOrder/delete/{id}'  , ['as' => 'admin.order.backstage_orderdelete', 'uses' => 'AdminBackstageController@orderdestroy']);
+
+
+//商品管理
+Route::get('/BackstageProduct', ['as' => 'admin.product.backstage_product' , 'uses' => 'AdminBackstageController@productindex']);
+//修改商品
+Route::get('/BackstageProduct/edit/{id}', ['as' => 'admin.product.backstage_productedit'   , 'uses' => 'AdminBackstageController@productedit']);
+Route::patch('/BackstageProduct/update/{id}', ['as' => 'admin.product.backstage_productupdate' , 'uses' => 'AdminBackstageController@productupdate']);
+//刪除商品
+Route::delete('/BackstageProduct/delete/{id}'  , ['as' => 'admin.product.backstage_productdelete', 'uses' => 'AdminBackstageController@productdestroy']);
+//建立商品
+Route::get('/BackstageProduct/create', ['as' => 'admin.product.backstage_productcreate' , 'uses' => 'AdminBackstageController@productcreate']);
+Route::post('/BackstageProduct', ['as' => 'admin.product.backstage_productstore'  , 'uses' => 'AdminBackstageController@productstore']);
 
 Route::get('/back', 'BackController@back')->name('back');
 Route::delete('back/delete/{id}','BackController@delete',function($id){
@@ -61,10 +89,17 @@ Route::patch('/employee/{id}', 'EmployeeController@update',function($id){
 })->name('employee.update');
 Route::delete('employee/delete/{id}','EmployeeController@delete',function($id){
 })->name('employee.delete');
+//member
+Route::get('/member', ['as' => 'back.member.member' , 'uses' => 'MemberController@index']);
 
-Route::get('/member', 'MemberController@member')->name('member');
-Route::delete('member/delete/{id}','MemberController@delete',function($id){
-})->name('member.delete');
+Route::get('/member/edit/{id}', ['as' => 'back.member.edit'   , 'uses' => 'MemberController@edit']);
+Route::patch('/member/update/{id}', ['as' => 'back.member.pdate' , 'uses' => 'MemberController@update']);
+
+Route::delete('/member/delete/{id}'  , ['as' => 'back.member.delete', 'uses' => 'MemberController@destroy']);
+
+Route::get('/member/create', ['as' => 'back.member.create' , 'uses' => 'MemberController@productcreate']);
+Route::post('/member', ['as' => 'back.member.tstore'  , 'uses' => 'MemberController@productstore']);
+
 Route::get('/order', 'OrderController@order')->name('order');
 
 Route::get('/error', 'BackController@error')->name('error');

@@ -9,26 +9,45 @@ use DB;
 
 class MemberController extends Controller
 {
-    public function member()
-{
-    $data = DB::table('users')->get();;
-    return view('back.member', ['users' => $data]);
-}
-    public function back()
+    public function index()
     {
-        return view('back.backindex');
+        $member=Member::orderBy('id', 'ASC')->paginate(6);
+        $data=['member'=>$member];
+        return view('back.member.member', $data);
     }
-    public function order()
+
+    public function edit($id)
     {
-        return view('back.order');
+        $member=Member::find($id);
+        $data = ['member' => $member];
+        return view('back.member.edit', $data);
     }
-    public function employee()
+
+
+    public function update(Request $request , $id)
     {
-        return view('back.employee');
+        $member=Member::find($id);
+        $member->update($request->all());
+
+        return redirect()->route('back.member.member');
     }
-    public function delete($id)
+
+    public function store(Request $request)
+    {
+        Member::create($request->all());
+        return redirect()->route('back.member.member');
+    }
+
+
+    public function destroy($id)
     {
         Member::destroy($id);
-        return redirect()->route('back.member');
+        return redirect()->route('back.member.member');
     }
+
+    public function create()
+    {
+        return view('back.member.create');
+    }
+
 }

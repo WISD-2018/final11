@@ -141,6 +141,7 @@
                 <th>信箱</th>
                 <th>成立日期</th>
                 <th></th>
+                <th></th>
               </tr>
               </thead>
               @foreach ($users as $member)
@@ -150,11 +151,13 @@
                   <td>{{$member->name}}</td>
                   <td>{{$member->email}}</td>
                   <td>{{$member->created_at}}</td>
+                  <td> <a href="{{route('back.member.edit', $member->id)}}"><font color="#008B8B"><b>編輯</b></font></a></td>
                   <td>
-                    <form action="{{ route('member.delete', $member->id) }}" method="POST">
+                    <form action="{{ route('back.member.delete' , $member->id) }}" method="POST">
                       {{ csrf_field() }}
                       {{ method_field('DELETE') }}
-                      <button class="btn btn-link"><img src="http://www.shejiye.com/uploadfile/icon/2017/0203/shejiyeiconsvybjzsohuj.png" width="25" height="25"></button>
+
+                      <button class="btn btn-link"><font face="微軟正黑體" size="5px" color="#008B8B">刪除</font></button>
                     </form>
                   </td>
                 </tr>

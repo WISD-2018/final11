@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class order extends Model
+class Order extends Model
 {
     protected $table = 'order';
 
@@ -20,7 +20,7 @@ class order extends Model
     }
 
     protected  $fillable=[
-        'username', 'userphone',  'useraddress', 'created_at', 'updated_at',
+        'id','users_id','username', 'userphone',  'useraddress', 'created_at', 'updated_at',
     ];
 
 

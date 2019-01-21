@@ -15,10 +15,10 @@ class CreateGoodTable extends Migration
     {
         Schema::create('good', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('goodname');
-            $table->integer('price');
-            $table->integer('quantity');
-            $table->dateTime('expirydate');
+            $table->string('goodname')->nullable();;
+            $table->integer('price')->nullable();;
+            $table->integer('quantity')->nullable();;
+            $table->dateTime('expirydate')->nullable();;
             $table->timestamps();
         });
     }

@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Order;
+use App\Product;
 use Illuminate\Http\Request;
 
-
-class OrderController extends Controller
+class ProductsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -42,10 +41,10 @@ class OrderController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Order  $orders
+     * @param  \App\products  $products
      * @return \Illuminate\Http\Response
      */
-    public function show(Order $orders)
+    public function show(Product $products)
     {
         //
     }
@@ -53,10 +52,10 @@ class OrderController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Order  $orders
+     * @param  \App\products  $products
      * @return \Illuminate\Http\Response
      */
-    public function edit(Order $orders)
+    public function edit(Product $products)
     {
         //
     }
@@ -65,41 +64,21 @@ class OrderController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Order  $orders
+     * @param  \App\products  $products
      * @return \Illuminate\Http\Response
      */
-    //增加購物車物品數量
-    public function update(Request $request, Order $orders)
+    public function update(Request $request, Product $products)
     {
         //
     }
-
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Order  $orders
+     * @param  \App\products  $products
      * @return \Illuminate\Http\Response
      */
-    //刪除購物車物品
-    public function destroy(Request $request)
-    {
-
-
-        //
-    }
-
-    public function ordersearch()
-    {
-        //
-    }
-
-    public function overtime()
-    {
-        //
-    }
-
-    public function orderdestroy($id)
+    public function destroy(Product $products)
     {
         //
     }

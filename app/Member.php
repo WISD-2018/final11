@@ -8,9 +8,8 @@ class Member extends Model
 {
     protected $table ='users';
 
-       public function member()
-    {
-        return $this->belongsTo(Order::class);
-    }
+    protected $fillable=[
+        'id','name','email','created_at',
+    ];
 
 }
