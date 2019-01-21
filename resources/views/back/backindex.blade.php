@@ -179,6 +179,7 @@
                 <th>數量</th>
                 <th>安全庫存</th>
                 <th>有效日期</th>
+                <th></th>
               </tr>
               </thead>
 
@@ -191,6 +192,13 @@
                   <td>{{$good->quantity}}</td>
                   <td>50</td>
                   <td>{{$good->expirydate}}</td>
+                  <td>
+                    <form action="{{ route('back.delete', $good->id) }}" method="POST">
+                      {{ csrf_field() }}
+                      {{ method_field('DELETE') }}
+                      <button class="btn btn-link"><img src="http://www.shejiye.com/uploadfile/icon/2017/0203/shejiyeiconsvybjzsohuj.png" width="25" height="25"></button>
+                    </form>
+                  </td>
                 </tr>
                 </tbody>
               @endforeach
@@ -203,6 +211,13 @@
                   <td>{{$good->quantity}}</td>
                   <td>50</td>
                   <td>{{$good->expirydate}}</td>
+                  <td>
+                    <form action="{{ route('back.delete2', $good->id) }}" method="POST">
+                      {{ csrf_field() }}
+                      {{ method_field('DELETE') }}
+                      <button class="btn btn-link"><img src="http://www.shejiye.com/uploadfile/icon/2017/0203/shejiyeiconsvybjzsohuj.png" width="25" height="25"></button>
+                    </form>
+                  </td>
                 </tr>
                 </tbody>
               @endforeach
@@ -215,6 +230,13 @@
                   <td>{{$good->quantity}}</td>
                   <td>50</td>
                   <td>{{$good->expirydate}}</td>
+                  <td>
+                    <form action="{{ route('back.delete3', $good->id) }}" method="POST">
+                      {{ csrf_field() }}
+                      {{ method_field('DELETE') }}
+                      <button class="btn btn-link"><img src="http://www.shejiye.com/uploadfile/icon/2017/0203/shejiyeiconsvybjzsohuj.png" width="25" height="25"></button>
+                    </form>
+                  </td>
                 </tr>
                 </tbody>
               @endforeach

@@ -47,6 +47,12 @@ Route::get('/nutrition/{id}', 'NutritionController@nutritiondetail', function ($
 //後台管理
 
 Route::get('/back', 'BackController@back')->name('back');
+Route::delete('back/delete/{id}','BackController@delete',function($id){
+})->name('back.delete');
+Route::delete('back/delete2/{id}','BackController@delete2',function($id){
+})->name('back.delete2');
+Route::delete('back/delete3/{id}','BackController@delete3',function($id){
+})->name('back.delete3');
 Route::get('/employee', 'EmployeeController@employee')->name('employee');
 Route::get('/employee/{id}/edit', 'EmployeeController@edit',function($id){
 })->name('employee.edit');

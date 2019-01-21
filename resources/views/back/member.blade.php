@@ -151,11 +151,12 @@
                   <td>{{$member->email}}</td>
                   <td>{{$member->created_at}}</td>
                   <td>
-                  <form action="{{ route('member.delete', $member->id) }}" method="POST">
-                    {{ csrf_field() }}
-                    {{ method_field('DELETE') }}
-                    <button class="btn btn-link"><img src="{{asset('/img/core-img/close.png')}}"></button>
-                  </form></td>
+                    <form action="{{ route('member.delete', $member->id) }}" method="POST">
+                      {{ csrf_field() }}
+                      {{ method_field('DELETE') }}
+                      <button class="btn btn-link"><img src="http://www.shejiye.com/uploadfile/icon/2017/0203/shejiyeiconsvybjzsohuj.png" width="25" height="25"></button>
+                    </form>
+                  </td>
                 </tr>
                 </tbody>
               @endforeach

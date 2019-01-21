@@ -26,7 +26,8 @@ class MemberController extends Controller
     {
         return view('back.employee');
     }
-    public function delete($id){
+    public function delete($id)
+    {
         Member::destroy($id);
         return redirect()->route('back.member');
     }

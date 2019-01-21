@@ -163,57 +163,47 @@
                 </div>
             </div>
             <!-- DataTables Example -->
-            <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                            編輯產品<small>編輯產品</small>
-                        </h1>
-                        <ol class="breadcrumb">
-                            <li class="active">
-                                <i class="fa fa-edit"></i> 產品管理
-                            </li>
-                        </ol>
-                    </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">
+                        新增產品 <small>請輸入產品</small>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li class="active">
+                            <i class="fa fa-edit"></i> 產品管理
+                        </li>
+                    </ol>
                 </div>
-                <!-- /.row -->
+            </div>
             <!-- /.row -->
 
-                <div class="row">
-                    <div class="col-lg-12">
-                        <form action="/admin/posts/{{$post->id}}" method="POST" role="form">
-                            {{ csrf_field() }}
-                            {{ method_field('PATCH') }}
+        <!-- /.row -->
 
-                            <div class="form-group">
-                                <label>標題：</label>
-                                <input name="title" class="form-control" placeholder="請輸入文章標題" value="{{$post->title}}">
-                            </div>
-                            <div class="form-group">
-                                <label>內容：</label>
-                                <textarea name="content" class="form-control" rows="10">{{$post->content}}</textarea>
-                            </div>
-                            <div class="form-group">
-                                <label>精選？</label>
-                                <select name="is_feature" class="form-control" >
-                                    <option value="0" {{ $post->is_feature?'':'SELECTED' }}>否</option>
-                                    <option value="1" {{ $post->is_feature?'SELECTED':'' }}>是</option>
-                                </select>
-                            </div>
-                            <div class="text-right">
-                                <button type="submit" class="btn btn-success">更新</button>
-                            </div>
-                        </form>
-
-
-                        <p>&nbsp;</p>
-                        <p>&nbsp;</p>
-                        <p>&nbsp;</p>
-
-                    </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form action="/back/backindex" method="POST" role="form">
+                        {{ csrf_field() }}
+                        <div class="form-group">
+                            <label>標題：</label>
+                            <input name="title" class="form-control" placeholder="請輸入文章標題">
+                        </div>
+                        <div class="form-group">
+                            <label>內容：</label>
+                            <textarea name="content" class="form-control" rows="10"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>精選？</label>
+                            <select name="is_feature" class="form-control">
+                                <option value="0">否</option>
+                                <option value="1">是</option>
+                            </select>
+                        </div>
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-success">新增</button>
+                        </div>
+                    </form>
                 </div>
-                <!-- /.row -->
-
+            </div>
         <!-- /.container-fluid -->
 
         <!-- Sticky Footer -->
