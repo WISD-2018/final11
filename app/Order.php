@@ -20,7 +20,7 @@ class Order extends Model
     }
 
     protected  $fillable=[
-        'id','users_id','username', 'userphone',  'useraddress', 'created_at', 'updated_at',
+        'id','good_id','users_id','username','useremail','useraddress', 'userphone',  'useraddress', 'created_at', 'updated_at',
     ];
 
 
