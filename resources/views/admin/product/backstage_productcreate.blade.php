@@ -128,24 +128,29 @@
 
                 <font face="微軟正黑體">
 
-                <div class="form-group">
+                  <div class="form-group">
+                    <label>產品編號：</label>
+                    <input type="string" class="form-control" name="id" placeholder="請輸入產品編號" >
+                  </div>
+                  <div class="form-group">
                   <label>產品名稱：</label>
-                  <input type="string" class="form-control" name="name" placeholder="請輸入產品名稱">
-                </div>
-                <div class="form-group">
-                  <label>價錢：</label>
-                  <input type="string" class="form-control" name="picture" placeholder="請輸入價錢">
+                  <input type="string" class="form-control" name="goodname" placeholder="請輸入產品名稱" >
                 </div>
 
-                <div class="form-group">
-                  <label>數量：</label>
-                  <input type="string" class="form-control" name="time" placeholder="請輸入數量">
-                </div>
+            <div class="form-group">
+              <label>價錢：</label>
+              <input type="string" class="form-control" name="price" placeholder="請輸入價錢">
+            </div>
 
-                <div class="form-group">
-                  <label>有效日期：</label>
-                  <input type="string" class="form-control" name="where" placeholder="請輸入有效日期">
-                </div>
+            <div class="form-group">
+              <label>數量：</label>
+              <input type="string" class="form-control" name="quantity" placeholder="請輸入數量">
+            </div>
+
+            <div class="form-group">
+              <label>有效日期：</label>
+              <input type="string" class="form-control" name="expirydate" placeholder="請輸入有效日期">
+            </div>
 
 
                 <div class="col-lg-12 col-md-10 mx-auto">

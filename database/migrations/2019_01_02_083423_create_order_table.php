@@ -18,9 +18,9 @@ class CreateOrderTable extends Migration
             $table->integer('good_id');
             $table->integer('user_id');
             $table->string('username');
-            $table->string('useremail');
+            $table->string('userphone');
             $table->string('useraddress');
-            $table->dateTime('shipdate');
+            $table->dateTime('created_at');
             $table->timestamps();
         });
     }

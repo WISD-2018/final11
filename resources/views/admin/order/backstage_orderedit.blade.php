@@ -130,30 +130,30 @@
                 <font face="微軟正黑體">
                   <div class="form-group">
                     <label>訂單編號：</label>
-                    <input type="string" class="form-control" name="name" placeholder="請輸入產品名稱" >
+                    <input type="increments" class="form-control" name="id" placeholder="請輸入訂單編號" value="{{$order->id}}" >
                   </div>
 
                   <div class="form-group">
                     <label>顧客編號：</label>
-                    <input type="string" class="form-control" name="picture" placeholder="請輸入價錢">
+                    <input type="integer" class="form-control" name="user_id" placeholder="請輸入顧客編號" value="{{$order->user_id}}">
                   </div>
 
                   <div class="form-group">
                     <label>顧客姓名：</label>
-                    <input type="string" class="form-control" name="time" placeholder="請輸入數量">
+                    <input type="string" class="form-control" name="username" placeholder="請輸入顧客姓名" value="{{$order->username}}">
                   </div>
 
                   <div class="form-group">
                     <label>顧客電話：</label>
-                    <input type="string" class="form-control" name="where" placeholder="請輸入有效日期">
+                    <input type="string" class="form-control" name="userphone" placeholder="請輸入顧客電話" value="{{$order->userphone}}">
                   </div>
                   <div class="form-group">
                     <label>住家地址：</label>
-                    <input type="string" class="form-control" name="where" placeholder="請輸入有效日期">
+                    <input type="string" class="form-control" name="useraddress" placeholder="請輸入住家地址" value="{{$order->useraddress}}">
                   </div>
                   <div class="form-group">
                     <label>下單日期：</label>
-                    <input type="string" class="form-control" name="where" placeholder="請輸入有效日期">
+                    <input type="dateTime" class="form-control" name="created_at" placeholder="請輸入下單日期" value="{{$order->created_at}}">
                   </div>
 
                 <div class="col-lg-12 col-md-10 mx-auto">

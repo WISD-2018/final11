@@ -8,8 +8,7 @@ class Good2 extends Model
 {
     protected $table = 'good2';
 
-    public function back()
-    {
-        return $this->belongsTo(Order::class);
-    }
+    protected $fillable=[
+        'id','goodname','price','quantity','expirydate',
+    ];
 }

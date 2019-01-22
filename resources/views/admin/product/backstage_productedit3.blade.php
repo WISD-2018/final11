@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog - Start Bootstrap Theme</title>
+    <title>後台 - 商品修改</title>
 
     <!-- Bootstrap core CSS -->
     <link href="SecondHand/public/css/bootstrap.min.css" rel="stylesheet">
@@ -120,40 +120,47 @@
             <br/>
             <br/>
           </font>
-          <h1><font face="微軟正黑體">編輯會員</font></h1>
+          <h1><font face="微軟正黑體">編輯商品</font></h1>
           <div class="row">
             <div class="col-lg-12">
-              <form action="/BackstageUser/update/{{$user->id}}" method="POST" role="form">
+              <form action="/BackstageProduct/update3/{{$product3->id}}" method="POST" role="form">
                 {{ csrf_field() }}
                 {{ method_field('PATCH') }}
 
                 <font face="微軟正黑體">
                   <div class="form-group">
-                    <label>會員編號：</label>
-                    <input name="id" class="form-control" value="{{$user->id}}">
+                    <label>產品編號：</label>
+                    <input type="string" class="form-control" name="id" placeholder="請輸入產品編號" value="{{$product3->id}}">
                   </div>
-                <div class="form-group">
-                  <label>會員姓名：</label>
-                  <input name="name" class="form-control" value="{{$user->name}}">
-                </div>
+                  <div class="form-group">
+                    <label>產品名稱：</label>
+                    <input type="string" class="form-control" name="goodname" placeholder="請輸入產品名稱" value="{{$product3->goodname}}">
+                  </div>
 
-                <div class="form-group">
-                  <label>信箱：</label>
-                  <input name="email" class="form-control" value="{{$user->email}}">
-                </div>
+                  <div class="form-group">
+                    <label>價錢：</label>
+                    <input type="string" class="form-control" name="price" placeholder="請輸入價錢" value="{{$product3->price}}">
+                  </div>
 
-                <div class="form-group">
-                  <label>成立日期：</label>
-                  <input name="created_at" class="form-control" value="{{$user->created_at}}">
-                </div>
+                  <div class="form-group">
+                    <label>數量：</label>
+                    <input type="string" class="form-control" name="quantity" placeholder="請輸入數量" value="{{$product3->quantity}}">
+                  </div>
+
+                  <div class="form-group">
+                    <label>有效日期：</label>
+                    <input type="string" class="form-control" name="expirydate" placeholder="請輸入有效日期" value="{{$product3->expirydate}}">
+                  </div>
 
                 <div class="col-lg-12 col-md-10 mx-auto">
                   <button type="submit" class="btn btn-primary"><font face="微軟正黑體" size="4px" >更新</font></button>
-                  <a href="http://localhost:8000/BackstageUser" ><button class="btn btn-primary" type="button"><font face="微軟正黑體" size="4px" >返回</font></button></a>
+                  <a href="http://localhost:8000/BackstageProduct" ><button class="btn btn-primary" type="button"><font face="微軟正黑體" size="4px" >返回</font></button></a>
                 </div>
                 </font>
 
               </form>
+
+            <br>
 
 
             </div>

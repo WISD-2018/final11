@@ -192,6 +192,90 @@
 
 
             @endforeach
+            @foreach($products2 as $product)
+
+              <tr>
+                <td>
+                  <center><font face="微軟正黑體">{{$product->id}}</font></center>
+                </td>
+                <td>
+                  <center><font face="微軟正黑體">{{$product->goodname}}</font></center>
+                </td>
+                <td>
+                  <center><font face="微軟正黑體">{{$product->price}}</font></center>
+                </td>
+                <td>
+                  <center><font face="微軟正黑體">{{$product->quantity}}</font></center>
+                </td>
+                <td>
+                  <center><font face="微軟正黑體">50</font></center>
+                </td>
+                <td>
+                  <center><font face="微軟正黑體">{{$product->expirydate}}</font></center>
+                </td>
+                <td>
+                  <center><font face="微軟正黑體" size="5px">
+                      <!--form條件還沒加-->
+                      <a href="{{route('admin.product.backstage_productedit2', $product->id)}}"><font color="#008B8B"><b>編輯</b></font></a>
+                    </font></center>
+                </td>
+                <td>
+                  <center>
+                    <!--form條件還沒加-->
+                    <form action="{{ route('admin.product.backstage_productdelete' , $product->id) }}" method="POST">
+                      {{ csrf_field() }}
+                      {{ method_field('DELETE') }}
+
+                      <button class="btn btn-link"><font face="微軟正黑體" size="5px" color="#008B8B">刪除</font></button>
+                    </form>
+                  </center>
+                </td>
+              </tr>
+
+
+            @endforeach
+            @foreach($products3 as $product)
+
+              <tr>
+                <td>
+                  <center><font face="微軟正黑體">{{$product->id}}</font></center>
+                </td>
+                <td>
+                  <center><font face="微軟正黑體">{{$product->goodname}}</font></center>
+                </td>
+                <td>
+                  <center><font face="微軟正黑體">{{$product->price}}</font></center>
+                </td>
+                <td>
+                  <center><font face="微軟正黑體">{{$product->quantity}}</font></center>
+                </td>
+                <td>
+                  <center><font face="微軟正黑體">50</font></center>
+                </td>
+                <td>
+                  <center><font face="微軟正黑體">{{$product->expirydate}}</font></center>
+                </td>
+                <td>
+                  <center><font face="微軟正黑體" size="5px">
+                      <!--form條件還沒加-->
+                      <a href="{{route('admin.product.backstage_productedit3', $product->id)}}"><font color="#008B8B"><b>編輯</b></font></a>
+                    </font></center>
+                </td>
+                <td>
+                  <center>
+                    <!--form條件還沒加-->
+                    <form action="{{ route('admin.product.backstage_productdelete' , $product->id) }}" method="POST">
+                      {{ csrf_field() }}
+                      {{ method_field('DELETE') }}
+
+                      <button class="btn btn-link"><font face="微軟正黑體" size="5px" color="#008B8B">刪除</font></button>
+                    </form>
+                  </center>
+                </td>
+              </tr>
+
+
+            @endforeach
 
 
           </table>
