@@ -31,7 +31,7 @@
     - (Route::get('/checkout'))
 - 訂單資訊查詢(3A532008 曾敏華、3A532049 游智萱)
     - (Route::get('/user'))
-- 後台(新增、刪除、修改)使用者、訂單、商品(3A532027 黃詩敏)
+- 後台介面(首頁、使用者、訂單、商品)及功能(新增、刪除、修改)(3A532027 黃詩敏)
     - (Route::get('/admin'))&(Route::get('/BackstageUser'))&(Route::get('/BackstageUser/edit/{id}'))&(Route::patch('/BackstageUser/update/{id}'))&(Route::delete('/BackstageUser/delete/{id}'))&(Route::get('/BackstageOrder'))&(Route::get('/BackstageOrder/edit/{id}'))&(Route::patch('/BackstageOrder/update/{id}'))&(Route::delete('/BackstageOrder/delete/{id}'))&(Route::get('/BackstageProduct'))&(Route::get('/BackstageProduct/edit/{id}'))&(Route::get('/BackstageProduct/edit2/{id}'))&(Route::get('/BackstageProduct/edit3/{id}'))&(Route::patch('/BackstageProduct/update/{id}'))&(Route::patch('/BackstageProduct/update2/{id}'))&(Route::patch('/BackstageProduct/update3/{id}'))&(Route::delete('/BackstageProduct/delete/{id}'))&(Route::get('/BackstageProduct/create'))&(Route::post('/BackstageProduct'))
 
 ## 系統的作用
@@ -59,7 +59,7 @@
 
 ## 系統開發人員
 - 四資三甲 3A532008 [曾敏華](https://github.com/3A532008)(購物車、結帳)
-- 四資三甲 3A532027 [黃詩敏](https://github.com/3A532027)(後台(使用者、訂單、商品的新增、刪除、修改))
+- 四資三甲 3A532027 [黃詩敏](https://github.com/3A532027)(後台)
 - 四資三甲 3A532049 [游智萱](https://github.com/3A532049)(商品相關頁面、會員)
 
 
