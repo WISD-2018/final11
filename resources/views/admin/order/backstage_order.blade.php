@@ -151,10 +151,6 @@
             <td bgcolor="#cccccc" width="120px">
               <h5><font face="微軟正黑體" color="#343a40" ><center></center></font></h5>
             </td>
-            <td bgcolor="#cccccc" width="120px">
-              <h5><font face="微軟正黑體" color="#343a40" ><center></center></font></h5>
-            </td>
-
           </tr>
 
             @foreach($orders as $order)
