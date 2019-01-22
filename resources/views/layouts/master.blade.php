@@ -1,18 +1,23 @@
+<!doctype html>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="icon" href="{{ asset('favicon.ico') }}">
 
-    <title>@yield('title') | 管理後台</title>
+    <title>@yield('page-title') | 購物平台示範</title>
+
 
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+@yield('page-style')
 
     <!-- Custom CSS -->
     @if(Auth::user()->previlege_id==3)
@@ -33,17 +38,21 @@
 
 </head>
 
-<body>
+<body class="{{ (request()->is('cart'))? 'bg-light' : '' }}">
 
     <div id="wrapper">
 
-        @include('admin.layouts.partials.sidebar')
-        <div id="page-wrapper">
 
+        <div id="page-wrapper">
+            @yield('page-content')
             <div class="container-fluid">
 
                 @yield('content')
 
+                <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
+                <script src="{{ asset('js/popper.min.js') }}"></script>
+                <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+                @yield('page-script')
             </div>
             <!-- /.container-fluid -->
 
@@ -52,6 +61,7 @@
 
     </div>
     <!-- /#wrapper -->
+
 
     <!-- jQuery -->
     <script src="{{ asset('js/jquery.js') }}"></script>
