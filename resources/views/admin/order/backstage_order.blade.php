@@ -184,17 +184,6 @@
                       <a href="{{route('admin.order.backstage_orderedit', $order->id)}}"><font color="#008B8B"><b>編輯</b></font></a>
                     </font></center>
                 </td>
-                <td>
-                  <center>
-                    <!--form條件還沒加-->
-                    <form action="{{ route('admin.order.backstage_orderdelete' , $order->id) }}" method="POST">
-                      {{ csrf_field() }}
-                      {{ method_field('DELETE') }}
-
-                      <button class="btn btn-link"><font face="微軟正黑體" size="5px" color="#008B8B">刪除</font></button>
-                    </form>
-                  </center>
-                </td>
               </tr>
 
 
