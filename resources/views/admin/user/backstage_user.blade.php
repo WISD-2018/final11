@@ -112,13 +112,20 @@
 
         <!--CSS太難看-->
           <h1>     </h1><br>
-        <!--所以靠他們調整版面一下-->
           <font face="微軟正黑體">
             <br/>
             <br/>
             <br/>
           </font>
-          <h1><font face="微軟正黑體">訂單管理</font></h1>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="http://localhost:8000/admin">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item active">使用者管理</li>
+          </ol>
+        <!--所以靠他們調整版面一下-->
+
+          <h1><font face="微軟正黑體">使用者管理</font></h1>
 
           <table style="border:1px #cccccc solid;" cellpadding="10" border='1' width="100%">
 
